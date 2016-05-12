@@ -134,7 +134,7 @@ function F_Send_Request()
 	var reponse_text ;
 	var reponse_text_Array=[] ;
 	//var audio = new Audio('bip.mp3');
-    //alert("send ok");
+    alert("send ok");
 
 	xhr.responseType = 'text' ;
 	xhr.open('GET', 'http://192.168.4.1', true) ;
