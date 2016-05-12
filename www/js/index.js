@@ -136,7 +136,7 @@ function F_Send_Request()
 	//var audio = new Audio('bip.mp3');
     alert("send ok");
 
-	xhr.responseType = 'text' ;
+	//xhr.responseType = 'text' ;
 	xhr.open('GET', 'http://192.168.4.1', true) ;
 		
 	//xhr.addEventListener("readystatechange", scrutation_requete);
@@ -167,6 +167,7 @@ function F_Send_Request()
 	});*/
 	xhr.onload = function () 
 		{
+			alert("reponse recu");
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
 			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
