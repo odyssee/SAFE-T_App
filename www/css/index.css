@@ -59,7 +59,7 @@ body {
 	font-family: Open Sans;
 	/*---------------------------------------------*/
     /*font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;*/
-    font-size:100%; /* Ou bien remplacer avec 16px? */
+    font-size: 16px; /* Ou bien remplacer avec 100%? */
     height: max-height;
 	position: absolute;
 	min-height: 100%;
@@ -215,9 +215,9 @@ header
 	position: absolute;
 	top: 0;
 	height: 10%; 
-	width: 98%; /* width = 100% - padding-left */
+	width: 97%; /* width = 100% - padding-left */
 	margin: 0 0;
-	padding-left: 2%; /* Marge intérieure*/
+	padding-left: 3%; /* Marge intérieure*/
 	
 	/*-webkit-box-shadow:inset 0px 0px 0px 2px black;
 	box-shadow:inset 0px 0px 0px 2px black;*/
@@ -260,12 +260,71 @@ header img{
 
 	height: 60%;
 	width: 50%;
+	/*height: 60%;
+	width: 50%;*/
 	/*On aligne verticalement les textes entre eux http://www.alsacreations.com/astuce/lire/4-alignement-vertical-image-texte.html */
 	line-height: 100%;
-	vertical-align: bottom;
+	/*vertical-align: bottom;*/
 	/*-webkit-box-shadow:inset 0px 0px 0px 1px yellow;
 	box-shadow:inset 0px 0px 0px 1px yellow;*/
+
 }
+
+.Safe
+{
+	display: -webkit-box;
+    display: -webkit-flex; 
+	/*display: -moz-box;
+	display: -ms-flexbox;*/
+    display: flex;
+	
+	
+	-webkit-box-orient: horizontal;
+	-webkit-flex-direction: row; 
+	/*-moz-box-direction: normal;
+	-ms-flex-direction: row;*/
+	flex-direction: row;
+	
+	/*On centre les éléments verticalement*/
+	-webkit-align-items: end;
+	align-items: end;
+	-webkit-box-align: end;
+	line-height: 85%; /* Pour avoir "SAFE-T" et "Monitor" sur la même ligne, garder cette ligne */
+	
+	font-family: Open Sans;
+	font-weight: bold;
+	font-size: 150%;
+	color: white;
+}
+
+.Monitor
+{
+	display: -webkit-box;
+    display: -webkit-flex; 
+	/*display: -moz-box;
+	display: -ms-flexbox;*/
+    display: flex;
+	
+	
+	-webkit-box-orient: horizontal;
+	-webkit-flex-direction: row; 
+	/*-moz-box-direction: normal;
+	-ms-flex-direction: row;*/
+	flex-direction: row;
+	
+	/*On centre les éléments verticalement*/
+	-webkit-align-items: end;
+	align-items: end;
+	-webkit-box-align: end;
+	line-height: 100%;  /* Pour avoir "SAFE-T" et "Monitor" sur la même ligne, garder cette ligne */
+	
+	font-family: Open Sans;
+	font-weight: bold;
+	font-size: 60%;
+	color: #0088bc;
+	vertical-align: bottom;
+}
+
 footer
 {
 	display: -webkit-box;
@@ -409,7 +468,7 @@ section
 	/*On centre les éléments verticalement*/
 	box-pack: justify;
 	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
+	-webkit-justify-content: space-between; /* Encore mieux serait d'utiliser space-around, mais pas d'équivalent avec webkit-box-pack */
 	justify-content: space-between;
 
 	/*width: 100%;
@@ -421,6 +480,42 @@ section
 	/*-webkit-box-shadow:inset 0px 0px 0px 2px red;
 	box-shadow:inset 0px 0px 0px 2px red;*/
 
+
+}
+#topHalf /* On rajoute topHalf pour que l'ensemble des #tuiles soit bien centré */
+{
+	display: -webkit-box;
+    display: -webkit-flex; 
+	/*display: -moz-box;
+	display: -ms-flexbox;*/
+    display: flex;
+	
+	/* ON DIVISE LA SECTION EN DEUX VERTICALEMENT*/
+	-webkit-box-orient: vertical ;
+	-webkit-flex-direction: column; 
+	/*-webkit-flex-orient: normal;*/
+	/*-moz-box-direction: normal;
+	-ms-flex-direction: row;*/
+	flex-direction: column;
+	
+	
+	/*On centre les éléments horizontalement*/
+	-webkit-align-items: center;
+	align-items: center;
+	/*On centre les éléments verticalement*/
+	box-pack: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center; /* Encore mieux serait d'utiliser space-around, mais pas d'équivalent avec webkit-box-pack */
+	justify-content: center;
+
+	/*width: 100%;
+	height: 100%;*/
+	/*top: 2.5%;*/
+	height: 55%;
+	width: 100%;
+	
+	/*-webkit-box-shadow:inset 0px 0px 0px 2px blue;
+	box-shadow:inset 0px 0px 0px 2px blue;*/
 
 }
 #tuiles
@@ -453,7 +548,8 @@ section
 	
 	position: relative;
 	/*top: 0;*/
-	height: 55%;
+	height: 100%;
+	/*height: 55%; vieille hauteur sans .topHalf */
 	/*width: 100%;*/ 
 	/*margin: 30px;*/
 	background: white;
@@ -497,7 +593,7 @@ section
 	
 	position: relative;
 	/*top: 0;*/
-	height: 49%; /* Pour laisser un espacement vertical*/
+	height: 48.5%; /* Pour laisser un espacement vertical*/
 	width: 100%;
 	/*width: 100%;*/ 
 	/*margin: 30px;*/
@@ -609,22 +705,26 @@ section
 	flex-direction: row;	
 	
 	position: relative;
-	height: 80%;
-	width: 85%;
-	padding-top: 15%;
+	height: 40%;
+	width: 90%;
+	padding-top: 35%;
 	
-	-webkit-box-shadow:inset 0px 0px 0px 2px red;
-	box-shadow:inset 0px 0px 0px 2px red; 
+	/*-webkit-box-shadow:inset 0px 0px 0px 2px red;
+	box-shadow:inset 0px 0px 0px 2px red;*/ 
 	
 	/* Position du texte dans topCarre */
-	/* Horizontalement*/
-	-webkit-align-items: center;
-	align-items: center; 
-	/*On centre les éléments verticalement*/
+	/* Horizontalement -- A REVOIR*/
+	/*-webkit-align-items: center;
+	align-items: center; */
+	/*On centre les éléments Horizontalement*/
 	box-pack: center;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
 	justify-content: center;
+	/*box-pack: start;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;*/
 	
 	/*Police texte*/
 	color: #888888;
@@ -634,7 +734,7 @@ section
 	font-family: Open Sans;*/
 	font-family: Open Sans;
 	font-weight: bold;
-	font-size: 130%;
+	font-size: 110%;
 	
 }
 
@@ -684,14 +784,14 @@ section
 	
 	position: relative;
 	bottom: 0;
-	height: 25%;
+	height: 17.5%;
 	width: 100%;
 		
 	background-color: #e5e5e6;
 	color: #888888;
 	
-	-webkit-box-shadow:inset 0px 0px 0px 2px yellow;
-	box-shadow:inset 0px 0px 0px 2px yellow;
+	/*-webkit-box-shadow:inset 0px 0px 0px 2px yellow;
+	box-shadow:inset 0px 0px 0px 2px yellow;*/
 	
 	-webkit-box-orient: horizontal ;
 	-webkit-flex-direction: row; 
@@ -713,8 +813,11 @@ section
 	/*Police texte */
 	font-family: Open Sans;
 	font-style: normal;
-	font-size: 90%;
+	font-size: 75%;
 	/*font-size: 2 %;*/
+	
+	/*Emplacement*/
+	padding-bottom: 5%;
 	
 }
 
@@ -758,7 +861,8 @@ section
 	
 	position: relative;
 	/*top: 0;*/
-	height: 45%; /* Un peu de marge entre tuiles et partie Notifications*/
+	height: 43%; /* Un peu de marge entre tuiles et partie Notifications; 44 car on prend une hauteur de 45% et on soustrait un padding-top de 1%*/
+	padding-top: 2%;
 	/*width: 100%;*/
 	
 	
@@ -767,6 +871,7 @@ section
 	background: white;
 	/*webkit-box-shadow:inset 0px 0px 0px 2px red;
 	box-shadow:inset 0px 0px 0px 2px red;*/
+	
 	
 	/*Police */
 	font-family: Open Sans;
@@ -808,8 +913,10 @@ section
 	
 	position: relative;
 	/*top: 0;*/
-	height: 80%; /* Un peu de marge entre tuiles et partie Notifications*/
-	width: 96%;
+	/*height: 74%;*/ /* Un peu de marge entre tuiles et partie Notifications*/
+	/*height: 76%;*/
+	width: 93.5%; /* width = 100 - paddings - margin-top*/
+	margin-top: 0.5%; /* Mettre un espacement entre "NOTIFICATIONS" et le rectangle de notifications*/
 	/*top: 2%;*/
 	/*width: 100%;*/ 
 	/*margin: 30px;*/
@@ -817,7 +924,10 @@ section
 	-webkit-box-shadow:inset 0px 0px 0px 0.3em #f3f4f4; /*bordure grise*/
 	box-shadow:inset 0px 0px 0px 0.3em #f3f4f4;
 	
-	padding: 2%;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-top: 4%;
+	padding-bottom: 2%;
 	
 	/*Police*/
 	font-weight: bold;
@@ -864,14 +974,14 @@ h1 /*Police pour titre "SAFE-T"*/
 {
 	font-family: Open Sans;
 	font-weight: bold;
-	font-size: 140%;
+	font-size: 150%;
 	color: white;
 }
 h2 /*Police pour "Monitor" */
 {
 	font-family: Open Sans;
 	font-weight: bold;
-	font-size: 80%;
+	font-size: 60%;
 	color: #0088bc;
 }
 h4 /* Pour l'info dans les topCarres */
