@@ -59,7 +59,7 @@ body {
 	font-family: Open Sans;
 	/*---------------------------------------------*/
     /*font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;*/
-    font-size:16px;
+    font-size:100%; /* Ou bien remplacer avec 16px? */
     height: max-height;
 	position: absolute;
 	min-height: 100%;
@@ -610,10 +610,11 @@ section
 	
 	position: relative;
 	height: 80%;
-	width: 100%;
+	width: 85%;
+	padding-top: 15%;
 	
-	/*-webkit-box-shadow:inset 0px 0px 0px 2px red;
-	box-shadow:inset 0px 0px 0px 2px red; */
+	-webkit-box-shadow:inset 0px 0px 0px 2px red;
+	box-shadow:inset 0px 0px 0px 2px red; 
 	
 	/* Position du texte dans topCarre */
 	/* Horizontalement*/
@@ -633,7 +634,7 @@ section
 	font-family: Open Sans;*/
 	font-family: Open Sans;
 	font-weight: bold;
-	font-size: 110%;
+	font-size: 130%;
 	
 }
 
@@ -683,14 +684,14 @@ section
 	
 	position: relative;
 	bottom: 0;
-	height: 20%;
+	height: 25%;
 	width: 100%;
 		
 	background-color: #e5e5e6;
 	color: #888888;
 	
-	/*-webkit-box-shadow:inset 0px 0px 0px 2px yellow;
-	box-shadow:inset 0px 0px 0px 2px yellow;*/
+	-webkit-box-shadow:inset 0px 0px 0px 2px yellow;
+	box-shadow:inset 0px 0px 0px 2px yellow;
 	
 	-webkit-box-orient: horizontal ;
 	-webkit-flex-direction: row; 
