@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ var i ;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -134,7 +135,7 @@ function F_Send_Request()
 	var reponse_text ;
 	var reponse_text_Array=[] ;
 	//var audio = new Audio('bip.mp3');
-    
+        i++ ;
 	//xhr.responseType = 'text' ;
 	xhr.open('GET', 'http://192.168.4.1', true) ;
 	
@@ -174,7 +175,8 @@ function F_Send_Request()
 			document.getElementById('VITESSE').innerHTML = reponse_text_Array[9]+"m/s" ;
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
-			document.getElementById('HEURES_TOTALES').innerHTML =reponse_text_Array[3] ;
+			//document.getElementById('HEURES_TOTALES').innerHTML =reponse_text_Array[3] ;
+			document.getElementById('HEURES_TOTALES').innerHTML = i ;
 		};
 	xhr.send(null) ;
 		
