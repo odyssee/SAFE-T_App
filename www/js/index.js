@@ -32,8 +32,8 @@ var app = {
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
-    //onDeviceReady: function() {
-       // app.receivedEvent('deviceready');
+    onDeviceReady: function() {
+        app.receivedEvent('deviceready');
 		setInterval(F_Send_Request,2000) ;
     },
     // Update DOM on a Received Event
@@ -140,7 +140,7 @@ function F_Send_Request()
 	xhr.open('GET', 'http://192.168.4.1', true) ;
 		
 	//xhr.addEventListener("readystatechange", scrutation_requete);
-	xhr.addEventListener("readystatechange", function()
+	/*xhr.addEventListener("readystatechange", function()
 	{
 		if(xhr.readyState == XMLHttpRequest.DONE)
 		{
@@ -164,7 +164,17 @@ function F_Send_Request()
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML =reponse_text_Array[3] ;
 		}
-	});
+	});*/
+	xhr.onload = function () 
+		{
+			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
+			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
+			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
+			document.getElementById('VITESSE').innerHTML = reponse_text_Array[9]+"m/s" ;
+			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
+			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
+			document.getElementById('HEURES_TOTALES').innerHTML =reponse_text_Array[3] ;
+		};
 	xhr.send(null) ;
 		
 };
