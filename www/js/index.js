@@ -128,6 +128,16 @@ function notifWidth(){
 	//alert("width ok");
 }
 
+function notifHeight(){
+	var tuilesHeight = document.getElementById('tuiles').offsetHeight;
+	//alert("test1");
+	var rectangle= document.getElementById('notifRectangle');
+	//alert (rectangle);
+	//var rectangleHeight = rectangle.offsetHeight;
+	rectangle.style.height = 0.8*tuilesHeight +"px";
+	//alert("width ok");
+}
+
 function F_Send_Request()
 {
 	var xhr = new XMLHttpRequest() ;
