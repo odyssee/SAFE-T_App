@@ -16,7 +16,6 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
 var app = {
     // Application Constructor
     initialize: function() {
@@ -34,7 +33,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        //app.receivedEvent('deviceready');
+        app.receivedEvent('deviceready');
 		setInterval(F_Send_Request,2000) ;
     },
     // Update DOM on a Received Event
@@ -128,15 +127,6 @@ function notifWidth(){
 	notifications.style.width = tuilesWidth +"px";
 	//alert("width ok");
 }
-function notifHeight(){
-	var tuilesHeight = document.getElementById('tuiles').offsetHeight;
-	//alert("test1");
-	var rectangle= document.getElementById('notifRectangle');
-	alert (rectangle);
-	//var rectangleHeight = rectangle.offsetHeight;
-	rectangle.style.height = 0.8*tuilesHeight +"px";
-	//alert("width ok");
-}
 
 function F_Send_Request()
 {
@@ -144,12 +134,13 @@ function F_Send_Request()
 	var reponse_text ;
 	var reponse_text_Array=[] ;
 	//var audio = new Audio('bip.mp3');
-        
-	//xhr.responseType = 'text' ;
+    //alert("send ok");
+
+	xhr.responseType = 'text' ;
 	xhr.open('GET', 'http://192.168.4.1', true) ;
-	
+		
 	//xhr.addEventListener("readystatechange", scrutation_requete);
-	/*xhr.addEventListener("readystatechange", function()
+	xhr.addEventListener("readystatechange", function()
 	{
 		if(xhr.readyState == XMLHttpRequest.DONE)
 		{
@@ -173,20 +164,7 @@ function F_Send_Request()
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML =reponse_text_Array[3] ;
 		}
-	});*/
-	xhr.onload = function () 
-		{
-			reponse_text = xhr.responseText ;
-			reponse_text_Array = reponse_text.split("-");	
-			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
-			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
-			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
-			document.getElementById('VITESSE').innerHTML = reponse_text_Array[9]+"m/s" ;
-			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
-			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
-			document.getElementById('HEURES_TOTALES').innerHTML =reponse_text_Array[3] ;
-			//document.getElementById('HEURES_TOTALES').innerHTML = i ;
-		};
+	});
 	xhr.send(null) ;
 		
 };
