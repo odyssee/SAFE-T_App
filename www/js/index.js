@@ -18,7 +18,8 @@
  */
  
 var chaine_alerte ;
- 
+var audio = new Audio('bip.mp3');
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -155,7 +156,7 @@ function F_Send_Request()
 
 	//xhr.responseType = 'text' ;
 	xhr.open('GET', 'http://192.168.4.1', true) ;
-
+        audio.play() ;
 	
 		xhr.onload = function () 
 		{
