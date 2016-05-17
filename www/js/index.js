@@ -34,7 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
        // app.receivedEvent('deviceready');
-		setInterval(F_Send_Request,750) ;
+		setInterval(F_Send_Request,1000) ;
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
