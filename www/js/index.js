@@ -143,6 +143,8 @@ function F_Send_Request()
 	var xhr = new XMLHttpRequest() ;
 	var reponse_text ;
 	var reponse_text_Array=[] ;
+	var carre = getElementsByClassName(carre) ;
+	var carre_temp = carre[1] ;
 	//var audio = new Audio('bip.mp3');
     //alert("send ok");
 
@@ -179,12 +181,14 @@ function F_Send_Request()
 		xhr.onload = function () 
 		{
 			reponse_text = xhr.responseText ;
-			reponse_text_Array = reponse_text.split("-");	
+			reponse_text_Array = reponse_text.split("-");
+			
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
 			if(reponse_text_Array[5] > 80)
 			{
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
 			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
+			  document.getElementById(carre_temp).style.backgroundColor = '#E3BDBF' ;
 			}
 			else
 			{
