@@ -181,14 +181,14 @@ function F_Send_Request()
 			reponse_text = xhr.responseText ;
 			reponse_text_Array = reponse_text.split("-");	
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
-			if(reponse_text_Array[5] > 80)
+		/*	if(reponse_text_Array[5] > 80)
 			{
 			  document.getElementById('TEMPERATURE').style.color = #FF0000 ;	
 			}
 			else
 			{
 		          document.getElementById('TEMPERATURE').style.color = #888888 ;
-			}
+			}*/
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
 			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
 			document.getElementById('VITESSE').innerHTML = reponse_text_Array[9]+"m/s" ;
