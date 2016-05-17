@@ -143,43 +143,17 @@ function F_Send_Request()
 	var xhr = new XMLHttpRequest() ;
 	var reponse_text ;
 	var reponse_text_Array=[] ;
-	var carre_1 = [] ;
-	var carre_temp ;
+	var carre_1 = document.getElementsByClassName(carre) ;
+	var carre_temp = carre_1[1] ;
+	alert(carre_temp) ;
 	
-	carre_1 = document.getElementsByClassName(carre) ;
-	carre_temp = carre_1[1] ;
+	
 	//var audio = new Audio('bip.mp3');
     //alert("send ok");
 
 	//xhr.responseType = 'text' ;
 	xhr.open('GET', 'http://192.168.4.1', true) ;
-		
-	//xhr.addEventListener("readystatechange", scrutation_requete);
-	/* xhr.addEventListener("readystatechange", function()
-	{
-		if(xhr.readyState == XMLHttpRequest.DONE)
-		{
-		
-			reponse_text = xhr.responseText ;
-			reponse_text_Array = reponse_text.split("-");
-	//		if(reponse_text_Array[5]>23)
-	//		{
-    
-	//		  audio.play();
-	//		}
-	//		else
-	//	    {
-     //         document.getElementById('Temperature').style.color='#8ec9e1'; 
-	//		}
-			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
-			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
-			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
-			document.getElementById('VITESSE').innerHTML = reponse_text_Array[9]+"m/s" ;
-			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
-			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
-			document.getElementById('HEURES_TOTALES').innerHTML =reponse_text_Array[3] ;
-		}
-	}); */
+
 	
 		xhr.onload = function () 
 		{
