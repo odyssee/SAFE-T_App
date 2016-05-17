@@ -144,6 +144,7 @@ function F_Send_Request()
 	var reponse_text ;
 	var reponse_text_Array=[] ;
 	var carre_1 = document.getElementsByClassName("carre") ;
+	var chaine_alerte ;
 	//var carre_temp = carre_1[1] ;
 	//alert(carre_temp) ;
 	
@@ -159,9 +160,8 @@ function F_Send_Request()
 		{
 			reponse_text = xhr.responseText ;
 			reponse_text_Array = reponse_text.split("-");
-			
-			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
-			if(reponse_text_Array[5] > 80)
+			chaine_alerte = reponse_text_Array[10] ;
+			if(chaine_alerte(3) != 0)
 			{
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
 			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
@@ -173,6 +173,8 @@ function F_Send_Request()
 		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
 		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
 			}
+			
+			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
 			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
 			document.getElementById('VITESSE').innerHTML = reponse_text_Array[9]+"m/s" ;
