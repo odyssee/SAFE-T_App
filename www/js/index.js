@@ -151,7 +151,7 @@ function F_Send_Request()
 	
 	
 	
-	//var audio = new Audio('bip.mp3');
+	var audio = new Audio('bip_500.mp3');
     //alert("send ok");
 
 	//xhr.responseType = 'text' ;
