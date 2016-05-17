@@ -165,7 +165,7 @@ function F_Send_Request()
 			{
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
 			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
-			  carre_1[1].style.backgroundColor == '#E3BDBF' ;
+			  carre_1[1].style.backgroundColor = '#E3BDBF' ;
 			}
 			else
 			{
