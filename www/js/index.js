@@ -159,7 +159,7 @@ function F_Send_Request()
 			reponse_text = xhr.responseText ;
 			reponse_text_Array = reponse_text.split("-");
 			chaine_alerte = reponse_text_Array[10] ;
-			alert("chaine_alerte") ;
+			alert(chaine_alerte) ;
 		/*	if(chaine_alerte(3) != 0)
 			{
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
