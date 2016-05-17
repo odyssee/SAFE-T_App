@@ -159,7 +159,7 @@ function F_Send_Request()
 			reponse_text = xhr.responseText ;
 			reponse_text_Array = reponse_text.split("-");
 			chaine_alerte = reponse_text_Array[10] ;
-			alert(chaine_alerte) ;
+			
 		/*	if(chaine_alerte(3) != 0)
 			{
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
@@ -175,7 +175,8 @@ function F_Send_Request()
 			
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
-			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
+			//document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
+			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[10] ;
 			document.getElementById('VITESSE').innerHTML = reponse_text_Array[9]+"m/s" ;
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
