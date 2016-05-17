@@ -148,9 +148,12 @@ function F_Send_Request()
 	var reponse_text_Array=[] ;
 	var carre_1 = document.getElementsByClassName("carre") ;
 	
+/*	var path = window.location.pathname;
+        path = path.substr( path, path.length - 10 );
+        var path_final = 'file://' + path;*/
 	
 	
-	var audio = new Audio("android_asset\www\js\bip_500.mp3");
+	var audio = new Media("bip_500.mp3");
     //alert("send ok");
 
 	//xhr.responseType = 'text' ;
