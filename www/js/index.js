@@ -144,7 +144,7 @@ function F_Send_Request()
 	var reponse_text ;
 	var reponse_text_Array=[] ;
 	var carre_1 = document.getElementsByClassName("carre") ;
-	var carre_temp = carre_1[1] ;
+	//var carre_temp = carre_1[1] ;
 	//alert(carre_temp) ;
 	
 	
@@ -165,7 +165,7 @@ function F_Send_Request()
 			{
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
 			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
-			  document.getElementById(carre_temp).style.backgroundColor = '#E3BDBF' ;
+			  carre_1[1].style.backgroundColor == '#E3BDBF' ;
 			}
 			else
 			{
