@@ -184,12 +184,12 @@ function F_Send_Request()
 			if(reponse_text_Array[5] > 80)
 			{
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
-			  document.getElementById('TEMPERATURE').style.background-color = '#E3BDBF' ;
+			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
 			}
 			else
 			{
 		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
-		          document.getElementById('TEMPERATURE').style.background-color = '#E5E5E6' ;
+		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
 			}
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
 			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
