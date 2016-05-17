@@ -183,11 +183,13 @@ function F_Send_Request()
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
 			if(reponse_text_Array[5] > 80)
 			{
-			  document.getElementById('TEMPERATURE').style.color = '#FF0000' ;	
+			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
+			  document.getElementById('TEMPERATURE').style.background-color = '#E3BDBF' ;
 			}
 			else
 			{
 		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
+		          document.getElementById('TEMPERATURE').style.background-color = '#E5E5E6' ;
 			}
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
 			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
