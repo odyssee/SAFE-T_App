@@ -153,7 +153,7 @@ function F_Send_Request()
         var path_final = 'file://' + path;*/
 	
 	
-	var audio = new Media("/android_asset/bip_500.mp3");
+	var audio = new Media("/android_asset/www/bip_500.mp3");
     //alert("send ok");
 
 	//xhr.responseType = 'text' ;
