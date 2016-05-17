@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ 
+var chaine_alerte ;
+ 
 var app = {
     // Application Constructor
     initialize: function() {
@@ -144,7 +147,7 @@ function F_Send_Request()
 	var reponse_text ;
 	var reponse_text_Array=[] ;
 	var carre_1 = document.getElementsByClassName("carre") ;
-	var chaine_alerte ;
+	
 	
 	
 	//var audio = new Audio('bip.mp3');
