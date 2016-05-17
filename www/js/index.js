@@ -18,7 +18,7 @@
  */
  
 var chaine_alerte ;
-var audio = new Audio('bip.mp3');
+var audio = new Audio('bip_500.mp3');
 
 var app = {
     // Application Constructor
