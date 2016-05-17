@@ -171,6 +171,7 @@ function F_Send_Request()
 			{
 		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
 		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
+		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
 			}
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
 			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
