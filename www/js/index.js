@@ -180,7 +180,8 @@ function F_Send_Request()
 			document.getElementById('VITESSE').innerHTML = reponse_text_Array[9]+"m/s" ;
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
-			document.getElementById('HEURES_TOTALES').innerHTML =reponse_text_Array[3] ;
+			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
+			document.getElementById('notifRectangle').innerHTML = reponse_text ;
 			//document.getElementById('HEURES_TOTALES').innerHTML = i ;
 		};
 	xhr.send(null) ;
