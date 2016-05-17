@@ -143,8 +143,8 @@ function F_Send_Request()
 	var xhr = new XMLHttpRequest() ;
 	var reponse_text ;
 	var reponse_text_Array=[] ;
-	var carre = getElementsByClassName(carre) ;
-	var carre_temp = carre[1] ;
+	var carre_1 = getElementsByClassName(carre) ;
+	var carre_temp = carre_1[1] ;
 	//var audio = new Audio('bip.mp3');
     //alert("send ok");
 
