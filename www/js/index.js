@@ -160,7 +160,7 @@ function F_Send_Request()
 			reponse_text_Array = reponse_text.split("-");
 			chaine_alerte = reponse_text_Array[10] ;
 			
-			if(chaine_alerte(3) != 0)
+			if(chaine_alerte.charAt(3) != 0)
 			{
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
 			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
