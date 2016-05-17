@@ -150,7 +150,7 @@ function F_Send_Request()
 	
 	
 	
-	var audio = new Audio("www\js\bip_500.mp3");
+	var audio = new Audio("android_asset\www\js\bip_500.mp3");
     //alert("send ok");
 
 	//xhr.responseType = 'text' ;
