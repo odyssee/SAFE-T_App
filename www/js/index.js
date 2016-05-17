@@ -143,9 +143,9 @@ function F_Send_Request()
 	var xhr = new XMLHttpRequest() ;
 	var reponse_text ;
 	var reponse_text_Array=[] ;
-	var carre_1 = document.getElementsByClassName('carre') ;
+	var carre_1 = document.getElementsByClassName("carre") ;
 	var carre_temp = carre_1[1] ;
-	alert(carre_temp) ;
+	//alert(carre_temp) ;
 	
 	
 	//var audio = new Audio('bip.mp3');
