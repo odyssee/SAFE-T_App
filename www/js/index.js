@@ -180,26 +180,26 @@ function F_Send_Request()
 			{
 			  document.getElementById('PUISSANCE').style.color = '#DB1423' ;
 			  document.getElementById('PUISSANCE').style.backgroundColor = '#E3BDBF' ;
-			  carre_1[1].style.backgroundColor = '#E3BDBF' ;
+			  carre_1[2].style.backgroundColor = '#E3BDBF' ;
 			}
 			else
 			{
 		          document.getElementById('PUISSANCE').style.color = '#888888' ;
 		          document.getElementById('PUISSANCE').style.backgroundColor = '#E5E5E6' ;
-		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
+		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
 			}
 			
 			if(chaine_alerte.charAt(1) != 0)
 			{
 			  document.getElementById('LONGUEUR').style.color = '#DB1423' ;
 			  document.getElementById('LONGUEUR').style.backgroundColor = '#E3BDBF' ;
-			  carre_1[1].style.backgroundColor = '#E3BDBF' ;
+			  carre_1[4].style.backgroundColor = '#E3BDBF' ;
 			}
 			else
 			{
 		          document.getElementById('LONGUEUR').style.color = '#888888' ;
 		          document.getElementById('LONGUEUR').style.backgroundColor = '#E5E5E6' ;
-		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
+		          carre_1[4].style.backgroundColor = '#E5E5E6' ;
 			}
 			
 			
