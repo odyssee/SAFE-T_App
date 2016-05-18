@@ -202,7 +202,7 @@ function F_Play_Sound(fichier)
 function F_Fonction_Principale()
 {
   setInterval(F_Send_Request,1000) ;	
-//    setInterval(F_Affiche_Debug,1000) ;
+  setInterval(function(){F_Play_Sound(chaine_alerte.charAt(3));},1000) ;
   setInterval(F_Affiche_Debug,1000) ;
 }
 
