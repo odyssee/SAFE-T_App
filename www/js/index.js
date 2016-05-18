@@ -174,6 +174,11 @@ function F_Send_Request()
 			}
 			else
 			{
+		          flag_alerte_detecte = 0 ;
+		          if((flag_alerte_detecte == 0) && (flag_alerte_detecte_1 == 1))
+		          {
+		          	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
+			  }
 		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
 		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
 		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
@@ -205,6 +210,11 @@ function F_Send_Request()
 			}
 			else
 			{
+		          flag_alerte_detecte = 0 ;
+		          if((flag_alerte_detecte == 0) && (flag_alerte_detecte_1 == 1))
+		          {
+		          	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
+			  }
 		          document.getElementById('LONGUEUR').style.color = '#888888' ;
 		          document.getElementById('LONGUEUR').style.backgroundColor = '#E5E5E6' ;
 		          carre_1[4].style.backgroundColor = '#E5E5E6' ;
@@ -221,9 +231,41 @@ function F_Send_Request()
 			
 			if((flag_alerte_detecte == 1) && (flag_alerte_detecte_1 == 0))
 			{
-			  	if(chaine_alerte.charAt(1) != 0)
+			  	if((chaine_alerte.charAt(1) != 0) && (chaine_alerte.charAt(1) != 5))
 				{
-					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning power consumption too High" ;
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, power consumption too High" ;
+				}
+				if(chaine_alerte.charAt(1) == 5)
+				{
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, power consumption too High system will shut down, land your drone" ;
+				}
+				if((chaine_alerte.charAt(3) != 0) && (chaine_alerte.charAt(3) != 5))
+				{
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, temperature of the spool too High, unwind micro-tether" ;
+				}
+				if(chaine_alerte.charAt(3) == 5)
+				{
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, temperature of the spool is too High, system will shut down, land your drone" ;
+				}
+				if((chaine_alerte.charAt(4) != 0) && (chaine_alerte.charAt(4) != 5))
+				{
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, micro-tether lenght closed to the maximum value, lower drone altitude" ;
+				}
+				if(chaine_alerte.charAt(4) == 5)
+				{
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, cable lenght reached the maximum value, lower drone altitude" ;
+				}
+				if(chaine_alerte.charAt(2) == 5)
+				{
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, temperature of the system is too High, system will shut down, land your drone" ;
+				}
+				if(chaine_alerte.charAt(0) == 1)
+				{
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, short-circuit detected, system will shut down, land your drone" ;
+				}
+				if(chaine_alerte.charAt(0) == 2)
+				{
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, cable cut or onboard module failure, system will shut down, land your drone" ;
 				}
 			}
 			flag_alerte_detecte_1 = flag_alerte_detecte ;
@@ -253,6 +295,14 @@ function F_Play_Sound()
       audio4.play() ;  	
     }
     if((chaine_alerte.charAt(3) == 5) || (chaine_alerte.charAt(1)== 5))
+    {
+      audio5.play() ;  	
+    }
+    if((chaine_alerte.charAt(0) == 1) || (chaine_alerte.charAt(1)== 2))
+    {
+      audio5.play() ;  	
+    }
+    if(chaine_alerte.charAt(2) == 5)
     {
       audio5.play() ;  	
     }
