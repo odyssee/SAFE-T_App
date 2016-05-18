@@ -188,22 +188,22 @@ function F_Send_Request()
 		
 };
 
-function F_Play_Sound()
+function F_Play_Sound(fichier)
 {
     var path = window.location.pathname;
     path = path.substr( path, path.length - 10 );
-    var audio = new Media(path + 'bip_500.mp3');
-    audio.play() ;  	
+    if(fichier == 1)
+    {
+      var audio = new Media(path + 'bip_500.mp3');
+      audio.play() ;  	
+    }
 }
   
 function F_Fonction_Principale()
 {
   setInterval(F_Send_Request,1000) ;	
 //    setInterval(F_Affiche_Debug,1000) ;
-   if(chaine_alerte.charAt(3) == 1)
-    {
-    	document.getElementById('notifRectangle').innerHTML = chaine_alerte ;	
-    }
+  setInterval(F_Affiche_Debug,1000) ;
 }
 
 function F_Affiche_Debug()
