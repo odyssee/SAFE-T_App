@@ -149,8 +149,8 @@ function F_Send_Request()
 	var carre_1 = document.getElementsByClassName("carre") ;
 	
 	var path = window.location.pathname;
-   //     path = path.substr( path, path.length - 10 );
-   //     var path_final = 'file://' + path;
+        path = path.substr( path, path.length - 10 );
+        var path_final = 'file://' + path;
 	
 	
 	var audio = new Media("www/bip_500.mp3");
@@ -186,7 +186,7 @@ function F_Send_Request()
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
-			document.getElementById('notifRectangle').innerHTML = path ;
+			document.getElementById('notifRectangle').innerHTML = path_final ;
 			//document.getElementById('HEURES_TOTALES').innerHTML = i ;
 		};
 	xhr.send(null) ;
