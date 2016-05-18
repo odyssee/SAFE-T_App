@@ -188,13 +188,33 @@ function F_Send_Request()
 		
 };
 
-function F_Play_Sound(fichier)
+function F_Play_Sound()
 {
     var path = window.location.pathname;
     path = path.substr( path, path.length - 10 );
-    if(fichier == 1)
+    if((chaine_alerte.charAt(3) == 1) || (chaine_alerte.charAt(1)== 1))
     {
-      var audio = new Media(path + 'bip_500.mp3');
+      var audio = new Media(path + 'bip_300.mp3');
+      audio.play() ;  	
+    }
+    if((chaine_alerte.charAt(3) == 2) || (chaine_alerte.charAt(1)== 2))
+    {
+      var audio = new Media(path + 'bip_450.mp3');
+      audio.play() ;  	
+    }
+    if((chaine_alerte.charAt(3) == 3) || (chaine_alerte.charAt(1)== 3))
+    {
+      var audio = new Media(path + 'bip_650.mp3');
+      audio.play() ;  	
+    }
+    if((chaine_alerte.charAt(3) == 4) || (chaine_alerte.charAt(1)== 4))
+    {
+      var audio = new Media(path + 'bip_850.mp3');
+      audio.play() ;  	
+    }
+    if((chaine_alerte.charAt(3) == 5) || (chaine_alerte.charAt(1)== 5))
+    {
+      var audio = new Media(path + 'bip_1000.mp3');
       audio.play() ;  	
     }
 }
@@ -202,7 +222,7 @@ function F_Play_Sound(fichier)
 function F_Fonction_Principale()
 {
   setInterval(F_Send_Request,1000) ;	
-  setInterval(function(){F_Play_Sound(chaine_alerte.charAt(3));},1000) ;
+  setInterval(F_Play_Sound,1000) ;
   setInterval(F_Affiche_Debug,1000) ;
 }
 
