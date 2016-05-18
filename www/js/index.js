@@ -228,7 +228,7 @@ function F_Fonction_Principale()
 {
   setInterval(F_Send_Request,1000) ;	
   setInterval(F_Play_Sound,1000) ;
-  setInterval(F_Affiche_Debug,1000) ;
+//  setInterval(F_Affiche_Debug,1000) ;
 }
 
 function F_Affiche_Debug()
