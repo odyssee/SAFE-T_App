@@ -19,8 +19,7 @@
  
 var chaine_alerte ;
 
-    //alert("send ok");
-audio.play() ;
+  
 var app = {
     // Application Constructor
     initialize: function() {
