@@ -188,7 +188,7 @@ function F_Send_Request()
 			else
 			{
 		          flag_alerte_detecte = 0 ;
-		          if((flag_alerte_detecte == 0) || (flag_alerte_detecte_1 == 1))
+		          if((flag_alerte_detecte == 0) && (flag_alerte_detecte_1 == 1))
 		          {
 		          	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 			  }
