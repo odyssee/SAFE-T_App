@@ -260,4 +260,8 @@ function F_Affiche_Debug()
   {
   	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning power consumption too High" ;
   }
+  else 
+  {
+  	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
+  }
 }
