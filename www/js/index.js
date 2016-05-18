@@ -18,7 +18,11 @@
  */
  
 var chaine_alerte ;
-
+var audio1 ;
+var audio2 ;
+var audio3 ;
+var audio4 ;
+var audio5 ;
   
 var app = {
     // Application Constructor
@@ -222,11 +226,11 @@ function F_Fonction_Principale()
 {
   var path = window.location.pathname;
   path = path.substr( path, path.length - 10 );
-  var audio1 = new Media(path + 'bip_300.mp3');
-  var audio2 = new Media(path + 'bip_450.mp3');
-  var audio3 = new Media(path + 'bip_650.mp3');
-  var audio4 = new Media(path + 'bip_850.mp3');
-  var audio5 = new Media(path + 'bip_1000.mp3');
+  audio1 = new Media(path + 'bip_300.mp3');
+  audio2 = new Media(path + 'bip_450.mp3');
+  audio3 = new Media(path + 'bip_650.mp3');
+  audio4 = new Media(path + 'bip_850.mp3');
+  audio5 = new Media(path + 'bip_1000.mp3');
   setInterval(F_Send_Request,1000) ;	
   setInterval(F_Play_Sound,1000) ;
 //  setInterval(F_Affiche_Debug,1000) ;
