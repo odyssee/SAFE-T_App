@@ -37,8 +37,8 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-    setInterval(F_Play_Sound,2000) ;
-    setInterval(F_Send_Request,1000) ;
+    //setInterval(F_Send_Request,1000) ;
+    F_Fonction_Principale() ;
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -173,6 +173,7 @@ function F_Send_Request()
 		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
 			}
 			
+			
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
 			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
@@ -195,3 +196,13 @@ function F_Play_Sound()
     audio.play() ;  	
 }
   
+function F_Fonction_Principale()
+{
+  setInterval(F_Send_Request,1000) ;	
+  setInterval(F_Affiche_Debug,1000) ;
+}
+
+function F_Affiche_Debug()
+{
+  document.getElementById('notifRectangle').innerHTML = chaine_alerte ;	
+}
