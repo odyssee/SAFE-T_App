@@ -23,7 +23,9 @@ var audio2 ;
 var audio3 ;
 var audio4 ;
 var audio5 ;
-  
+var flag_alerte_detecte ;
+var flag_alerte_detecte_1 ;
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -178,6 +180,7 @@ function F_Send_Request()
 			}
 			if(chaine_alerte.charAt(1) != 0)
 			{
+			  flag_alerte_detecte = true ;
 			  document.getElementById('PUISSANCE').style.color = '#DB1423' ;
 			  document.getElementById('PUISSANCE').style.backgroundColor = '#E3BDBF' ;
 			  carre_1[2].style.backgroundColor = '#E3BDBF' ;
@@ -211,14 +214,19 @@ function F_Send_Request()
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
 			
-			if((chaine_alerte.charAt(1) != 0))// && (chaine_alerte.charAt(1) != 5))
+			if((flag_alerte_detecte == true) && (flag_alerte_detecte_1 == false))
 			{
-				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning power consumption too High" ;
+			  	if(chaine_alerte.charAt(1) != 0)
+				{
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning power consumption too High" ;
+				}
+				else 
+				{
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
+					flag_alerte_detecte = false ;
+				}	
 			}
-			else 
-			{
-				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
-			}
+			flag_alerte_detecte_1 = flag_alerte_detecte ;
 		};
 	xhr.send(null) ;
 		
