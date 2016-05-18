@@ -150,10 +150,10 @@ function F_Send_Request()
 	
 	var path = window.location.pathname;
         path = path.substr( path, path.length - 10 );
-        var path_final = 'file:/' + path;
+        //var path_final = 'file:/' + path;
 	
 	
-	var audio = new Media(path_final + 'bip_500.mp3');
+	var audio = new Media(path + 'bip_500.mp3');
     //alert("send ok");
 audio.play() ;
 	//xhr.responseType = 'text' ;
@@ -186,7 +186,7 @@ audio.play() ;
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
-			document.getElementById('notifRectangle').innerHTML = path_final ;
+			document.getElementById('notifRectangle').innerHTML = path ;
 			//document.getElementById('HEURES_TOTALES').innerHTML = i ;
 		};
 	xhr.send(null) ;
