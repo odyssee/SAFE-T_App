@@ -254,7 +254,7 @@ function F_Send_Request()
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
 			
-		/*	if((flag_alerte_puissance_detecte == 1) && (flag_alerte_puissance_detecte_1 == 0))
+			if((flag_alerte_puissance_detecte == 1) && (flag_alerte_puissance_detecte_1 == 0))
 			{
 			  	if((chaine_alerte.charAt(1) != 0) && (chaine_alerte.charAt(1) != 5))
 				{
@@ -304,7 +304,7 @@ function F_Send_Request()
 				{
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, cable cut or onboard module failure, system will shut down, land your drone" ;
 				}
-			}*/
+			}
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
 			flag_alerte_longueur_detecte_1 = flag_alerte_longueur_detecte ;
 			flag_alerte_temperature_detecte_1 = flag_alerte_temperature_detecte ;
