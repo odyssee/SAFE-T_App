@@ -256,7 +256,7 @@ function F_Fonction_Principale()
 
 function F_Affiche_Debug()
 {
-  if((chaine_alerte.charAt(1) != 0) || (chaine_alerte.charAt(1) != 5))
+  if((chaine_alerte.charAt(1) != 0) && (chaine_alerte.charAt(1) != 5))
   {
   	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning power consumption too High" ;
   }
