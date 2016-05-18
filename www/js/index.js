@@ -37,10 +37,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-    var path = window.location.pathname;
-    path = path.substr( path, path.length - 10 );
-    var audio = new Media(path + 'bip_500.mp3');
-    setInterval(audio.play,2000) ;    
+    setInterval(F_Play_Sound,2000) ;
     setInterval(F_Send_Request,1000) ;
     },
     // Update DOM on a Received Event
@@ -189,3 +186,12 @@ function F_Send_Request()
 	xhr.send(null) ;
 		
 };
+
+function F_Play_Sound()
+{
+    var path = window.location.pathname;
+    path = path.substr( path, path.length - 10 );
+    var audio = new Media(path + 'bip_500.mp3');
+    audio.play() ;  	
+}
+  
