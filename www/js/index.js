@@ -304,12 +304,12 @@ function F_Send_Request()
 				{
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, cable cut or onboard module failure, system will shut down, land your drone" ;
 				}
-			}
+			}*/
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
 			flag_alerte_longueur_detecte_1 = flag_alerte_longueur_detecte ;
 			flag_alerte_temperature_detecte_1 = flag_alerte_temperature_detecte ;
 			flag_alerte_temperature_systeme_detecte_1 = flag_alerte_temperature_systeme_detecte ;
-			flag_alerte_systeme_detecte_1 = flag_alerte_systeme_detecte ;*/
+			flag_alerte_systeme_detecte_1 = flag_alerte_systeme_detecte ;
 		};
 		xhr.send(null) ;
 		
