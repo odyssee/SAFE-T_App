@@ -189,7 +189,7 @@ function F_Send_Request()
 		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
 			}
 			
-			if(chaine_alerte.charAt(1) != 0)
+			if(chaine_alerte.charAt(4) != 0)
 			{
 			  document.getElementById('LONGUEUR').style.color = '#DB1423' ;
 			  document.getElementById('LONGUEUR').style.backgroundColor = '#E3BDBF' ;
@@ -210,8 +210,6 @@ function F_Send_Request()
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
-			document.getElementById('notifRectangle').innerHTML = path ;
-			//document.getElementById('HEURES_TOTALES').innerHTML = i ;
 		};
 	xhr.send(null) ;
 		
@@ -222,27 +220,22 @@ function F_Play_Sound()
     
     if((chaine_alerte.charAt(3) == 1) || (chaine_alerte.charAt(1)== 1) || (chaine_alerte.charAt(4)== 1))
     {
-      document.getElementById('notifRectangle').innerHTML = '1' ;
       audio1.play() ;  	
     }
     if((chaine_alerte.charAt(3) == 2) || (chaine_alerte.charAt(1)== 2) || (chaine_alerte.charAt(4)== 1))
     {
-      document.getElementById('notifRectangle').innerHTML = '2' ;
       audio2.play() ;  	
     }
     if((chaine_alerte.charAt(3) == 3) || (chaine_alerte.charAt(1)== 3) || (chaine_alerte.charAt(4)== 1))
     {
-      document.getElementById('notifRectangle').innerHTML = '3' ;
       audio3.play() ;  	
     }
     if((chaine_alerte.charAt(3) == 4) || (chaine_alerte.charAt(1)== 4) || (chaine_alerte.charAt(4)== 1))
     {
-      document.getElementById('notifRectangle').innerHTML = '4' ;
       audio4.play() ;  	
     }
     if((chaine_alerte.charAt(3) == 5) || (chaine_alerte.charAt(1)== 5))
     {
-      document.getElementById('notifRectangle').innerHTML = '5' ;
       audio5.play() ;  	
     }
 }
@@ -258,10 +251,13 @@ function F_Fonction_Principale()
   audio5 = new Media(path + 'bip_1000.mp3');
   setInterval(F_Send_Request,1000) ;	
   setInterval(F_Play_Sound,1200) ;
-//  setInterval(F_Affiche_Debug,1000) ;
+  setInterval(F_Affiche_Debug,900) ;
 }
 
 function F_Affiche_Debug()
 {
-  document.getElementById('notifRectangle').innerHTML = chaine_alerte ;	
+  if((chaine_alerte.charAt(1) != 0) || (chaine_alerte.charAt(1) != 5))
+  {
+  	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning power consumption too High" ;
+  }
 }
