@@ -176,6 +176,31 @@ function F_Send_Request()
 		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
 		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
 			}
+			if(chaine_alerte.charAt(1) != 0)
+			{
+			  document.getElementById('PUISSANCE').style.color = '#DB1423' ;
+			  document.getElementById('PUISSANCE').style.backgroundColor = '#E3BDBF' ;
+			  carre_1[1].style.backgroundColor = '#E3BDBF' ;
+			}
+			else
+			{
+		          document.getElementById('PUISSANCE').style.color = '#888888' ;
+		          document.getElementById('PUISSANCE').style.backgroundColor = '#E5E5E6' ;
+		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
+			}
+			
+			if(chaine_alerte.charAt(1) != 0)
+			{
+			  document.getElementById('LONGUEUR').style.color = '#DB1423' ;
+			  document.getElementById('LONGUEUR').style.backgroundColor = '#E3BDBF' ;
+			  carre_1[1].style.backgroundColor = '#E3BDBF' ;
+			}
+			else
+			{
+		          document.getElementById('LONGUEUR').style.color = '#888888' ;
+		          document.getElementById('LONGUEUR').style.backgroundColor = '#E5E5E6' ;
+		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
+			}
 			
 			
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
@@ -195,22 +220,22 @@ function F_Send_Request()
 function F_Play_Sound()
 {
     
-    if((chaine_alerte.charAt(3) == 1) || (chaine_alerte.charAt(1)== 1))
+    if((chaine_alerte.charAt(3) == 1) || (chaine_alerte.charAt(1)== 1) || (chaine_alerte.charAt(4)== 1))
     {
       document.getElementById('notifRectangle').innerHTML = '1' ;
       audio1.play() ;  	
     }
-    if((chaine_alerte.charAt(3) == 2) || (chaine_alerte.charAt(1)== 2))
+    if((chaine_alerte.charAt(3) == 2) || (chaine_alerte.charAt(1)== 2) || (chaine_alerte.charAt(4)== 1))
     {
       document.getElementById('notifRectangle').innerHTML = '2' ;
       audio2.play() ;  	
     }
-    if((chaine_alerte.charAt(3) == 3) || (chaine_alerte.charAt(1)== 3))
+    if((chaine_alerte.charAt(3) == 3) || (chaine_alerte.charAt(1)== 3) || (chaine_alerte.charAt(4)== 1))
     {
       document.getElementById('notifRectangle').innerHTML = '3' ;
       audio3.play() ;  	
     }
-    if((chaine_alerte.charAt(3) == 4) || (chaine_alerte.charAt(1)== 4))
+    if((chaine_alerte.charAt(3) == 4) || (chaine_alerte.charAt(1)== 4) || (chaine_alerte.charAt(4)== 1))
     {
       document.getElementById('notifRectangle').innerHTML = '4' ;
       audio4.play() ;  	
