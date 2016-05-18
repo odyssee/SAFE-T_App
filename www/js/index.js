@@ -232,7 +232,7 @@ function F_Fonction_Principale()
   audio4 = new Media(path + 'bip_850.mp3');
   audio5 = new Media(path + 'bip_1000.mp3');
   setInterval(F_Send_Request,1000) ;	
-  setInterval(F_Play_Sound,1500) ;
+  setInterval(F_Play_Sound,1100) ;
 //  setInterval(F_Affiche_Debug,1000) ;
 }
 
