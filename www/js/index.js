@@ -265,7 +265,7 @@ function F_Send_Request()
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, power consumption too High system will shut down, land your drone" ;
 				}
 			}
-			if((flag_alerte_temperature_detecte == 1) && (flag_alerte_temprature_detecte_1 == 0))
+			if((flag_alerte_temperature_detecte == 1) && (flag_alerte_temperature_detecte_1 == 0))
 			{
 				if((chaine_alerte.charAt(3) != 0) && (chaine_alerte.charAt(3) != 5))
 				{
