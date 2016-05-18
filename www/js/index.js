@@ -309,8 +309,8 @@ function F_Send_Request()
 			flag_alerte_longueur_detecte_1 = flag_alerte_longueur_detecte ;
 			flag_alerte_temperature_detecte_1 = flag_alerte_temperature_detecte ;
 			flag_alerte_temperature_systeme_detecte_1 = flag_alerte_temperature_systeme_detecte ;
-			flag_alerte_systeme_detecte_1 = flag_alerte_systeme_detecte ;
-		};*/
+			flag_alerte_systeme_detecte_1 = flag_alerte_systeme_detecte ;*/
+		};
 		xhr.send(null) ;
 		
 };
