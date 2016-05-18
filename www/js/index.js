@@ -199,7 +199,11 @@ function F_Play_Sound()
 function F_Fonction_Principale()
 {
   setInterval(F_Send_Request,1000) ;	
-  setInterval(F_Affiche_Debug,1000) ;
+//    setInterval(F_Affiche_Debug,1000) ;
+   if(chaine_alerte.charAt(3) == 1)
+    {
+    	document.getElementById('notifRectangle').innerHTML = chaine_alerte ;	
+    }
 }
 
 function F_Affiche_Debug()
