@@ -150,15 +150,15 @@ function F_Send_Request()
 	
 	var path = window.location.pathname;
         path = path.substr( path, path.length - 10 );
-        var path_final = 'file://' + path;
+        var path_final = 'file:/' + path;
 	
 	
 	var audio = new Media(path_final + 'bip_500.mp3');
     //alert("send ok");
-
+audio.play() ;
 	//xhr.responseType = 'text' ;
 	xhr.open('GET', 'http://192.168.4.1', true) ;
-        audio.play() ;
+        
 	
 		xhr.onload = function () 
 		{
