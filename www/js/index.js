@@ -174,7 +174,7 @@ function F_Send_Request()
 			reponse_text_Array = reponse_text.split("-");
 			chaine_alerte = reponse_text_Array[10] ;
 			
-			if(chaine_alerte.charAt(3) != 0)
+		/*	if(chaine_alerte.charAt(3) != 0)
 			{
 			  flag_alerte_temperature_detecte = 1 ;
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
@@ -244,7 +244,7 @@ function F_Send_Request()
 			else
 			{
 			  flag_alerte_systeme_detecte = 0 ;
-			}
+			}*/
 			
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
@@ -254,7 +254,7 @@ function F_Send_Request()
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
 			
-			if((flag_alerte_puissance_detecte == 1) && (flag_alerte_puissance_detecte_1 == 0))
+		/*	if((flag_alerte_puissance_detecte == 1) && (flag_alerte_puissance_detecte_1 == 0))
 			{
 			  	if((chaine_alerte.charAt(1) != 0) && (chaine_alerte.charAt(1) != 5))
 				{
@@ -310,7 +310,7 @@ function F_Send_Request()
 			flag_alerte_temperature_detecte_1 = flag_alerte_temperature_detecte ;
 			flag_alerte_temperature_systeme_detecte_1 = flag_alerte_temperature_systeme_detecte ;
 			flag_alerte_systeme_detecte_1 = flag_alerte_systeme_detecte ;
-		};
+		};*/
 		xhr.send(null) ;
 		
 };
@@ -362,14 +362,4 @@ function F_Fonction_Principale()
  // setInterval(F_Affiche_Debug,900) ;
 }
 
-function F_Affiche_Debug()
-{
-  if((chaine_alerte.charAt(1) != 0))// && (chaine_alerte.charAt(1) != 5))
-  {
-  	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning power consumption too High" ;
-  }
-  else 
-  {
-  	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
-  }
-}
+
