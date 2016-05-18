@@ -174,7 +174,7 @@ function F_Send_Request()
 			reponse_text_Array = reponse_text.split("-");
 			chaine_alerte = reponse_text_Array[10] ;
 			
-		/*	if(chaine_alerte.charAt(3) != 0)
+			if(chaine_alerte.charAt(3) != 0)
 			{
 			  flag_alerte_temperature_detecte = 1 ;
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
@@ -192,7 +192,7 @@ function F_Send_Request()
 		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
 		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
 			}
-			if(chaine_alerte.charAt(1) != 0)
+		/*	if(chaine_alerte.charAt(1) != 0)
 			{
 			  flag_alerte_puissance_detecte = 1 ;
 			  document.getElementById('PUISSANCE').style.color = '#DB1423' ;
