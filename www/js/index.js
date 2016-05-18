@@ -227,6 +227,7 @@ function F_Send_Request()
 				}	
 			}
 			flag_alerte_detecte_1 = flag_alerte_detecte ;
+			document.getElementById('notifRectangle').innerHTML = flag_alerte_detecte_1 + flag_alerte_detecte ;
 		};
 	xhr.send(null) ;
 		
