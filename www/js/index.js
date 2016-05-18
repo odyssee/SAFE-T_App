@@ -19,6 +19,8 @@
  
 var chaine_alerte ;
 
+    //alert("send ok");
+audio.play() ;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -36,8 +38,11 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-       // app.receivedEvent('deviceready');
-		setInterval(F_Send_Request,1000) ;
+    var path = window.location.pathname;
+    path = path.substr( path, path.length - 10 );
+    var audio = new Media(path + 'bip_500.mp3');
+    setInterval(audio.play,2000) ;    
+    setInterval(F_Send_Request,1000) ;
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -148,14 +153,7 @@ function F_Send_Request()
 	var reponse_text_Array=[] ;
 	var carre_1 = document.getElementsByClassName("carre") ;
 	
-	var path = window.location.pathname;
-        path = path.substr( path, path.length - 10 );
-        //var path_final = 'file:/' + path;
 	
-	
-	var audio = new Media(path + 'bip_500.mp3');
-    //alert("send ok");
-audio.play() ;
 	//xhr.responseType = 'text' ;
 	xhr.open('GET', 'http://192.168.4.1', true) ;
         
