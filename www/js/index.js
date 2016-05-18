@@ -210,6 +210,15 @@ function F_Send_Request()
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
+			
+			if((chaine_alerte.charAt(1) != 0))// && (chaine_alerte.charAt(1) != 5))
+			{
+				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning power consumption too High" ;
+			}
+			else 
+			{
+				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
+			}
 		};
 	xhr.send(null) ;
 		
@@ -251,7 +260,7 @@ function F_Fonction_Principale()
   audio5 = new Media(path + 'bip_1000.mp3');
   setInterval(F_Send_Request,1000) ;	
   setInterval(F_Play_Sound,1200) ;
-  setInterval(F_Affiche_Debug,900) ;
+ // setInterval(F_Affiche_Debug,900) ;
 }
 
 function F_Affiche_Debug()
