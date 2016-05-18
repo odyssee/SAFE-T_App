@@ -188,7 +188,8 @@ function F_Send_Request()
 			else
 			{
 		          flag_alerte_detecte = 0 ;
-		          document.getElementById('PUISSANCE').style.color = '#888888' ;
+		          document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
+			  document.getElementById('PUISSANCE').style.color = '#888888' ;
 		          document.getElementById('PUISSANCE').style.backgroundColor = '#E5E5E6' ;
 		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
 			}
@@ -221,11 +222,6 @@ function F_Send_Request()
 				{
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning power consumption too High" ;
 				}
-				else 
-				{
-					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
-					
-				}	
 			}
 			flag_alerte_detecte_1 = flag_alerte_detecte ;
 			//document.getElementById('notifRectangle').innerHTML = flag_alerte_detecte_1 + ':'+ flag_alerte_detecte ;
