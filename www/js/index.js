@@ -192,10 +192,10 @@ function F_Send_Request()
 			else
 			{
 		          flag_alerte_temperature_detecte = 0 ;
-		          if((flag_alerte_detecte == 0) && (flag_alerte_detecte_1 == 1))
+		/*          if((flag_alerte_detecte == 0) && (flag_alerte_detecte_1 == 1))
 		          {
 		          	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
-			  }
+			  }*/
 		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
 		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
 		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
