@@ -291,7 +291,10 @@ function F_Send_Request()
 		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
 		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
 		     //     document.getElementById('notifRectangle').style.color = '#112330' ;
-		          document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
+		          if(flag_alarme_puissance_detecte == 0 )
+		          {
+		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
+		          }
 		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
 			}
 			
