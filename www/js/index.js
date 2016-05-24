@@ -322,22 +322,68 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, temperature of the spool too High, unwind micro-tether" ; 
 			}
 			
-		/*	if(chaine_alerte.charAt(4) != 0)
+			/*****************************************/
+			/*               Longueur             */
+			/*****************************************/
+			if((chaine_alerte.charAt(4) != 0) && (chaine_alerte.charAt(4) != 5))
 			{
 			  flag_alerte_longueur_detecte = 1 ;
-			  document.getElementById('LONGUEUR').style.color = '#DB1423' ;
-			  document.getElementById('LONGUEUR').style.backgroundColor = '#E3BDBF' ;
+			  flag_alarme_longueur_detecte = 0 ;
+			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
+			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
 			  carre_1[4].style.backgroundColor = '#E3BDBF' ;
+			}
+			else if(chaine_alerte.charAt(4) == 5)
+			{
+			  flag_alarme_longueur_detecte = 1 ;
+			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
+			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
+			  carre_1[4].style.backgroundColor = '#E3BDBF' ;
+			  document.getElementById('notifRectangle').style.color = '#DB1423' ;
+		          document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
 			}
 			else
 			{
 		          flag_alerte_longueur_detecte = 0 ;
-		          document.getElementById('LONGUEUR').style.color = '#888888' ;
-		          document.getElementById('LONGUEUR').style.backgroundColor = '#E5E5E6' ;
+		          flag_alarme_longueur_detecte = 0 ;
+		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
+		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
+		     //     document.getElementById('notifRectangle').style.color = '#112330' ;
+		          if((flag_alarme_puissance_detecte == 0)
+		           && flag_alarme_temperature_detecte == 0))
+		          {
+		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
+		          }
 		          carre_1[4].style.backgroundColor = '#E5E5E6' ;
-			}*/
+			}
 			
-		/*	if(chaine_alerte.charAt(0) != 0)
+			if((flag_alerte_longueur_detecte == 1) && (flag_alerte_longueur_detecte_1 == 0))
+			{
+			  	if((chaine_alerte.charAt(4) != 0) && (chaine_alerte.charAt(4) != 5))
+				{
+					document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			                document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, temperature of the spool too High, unwind micro-tether" ; ;
+				}
+			}
+			if((flag_alarme_longueur_detecte == 1) && (flag_alarme_longueur_detecte_1 == 0))
+			{
+			  	if(chaine_alerte.charAt(4) == 5)
+				{
+					document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			                document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, temperature of the spool is too High, system will shut down, land your drone" ;
+				}
+			}
+			if((flag_alarme_longueur_detecte == 0) && (flag_alarme_longueur_detecte_1 == 1))
+			{
+			  	document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			        document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
+				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, temperature of the spool too High, unwind micro-tether" ; 
+			}
+			
+		
+			
+			if(chaine_alerte.charAt(0) != 0)
 			{
 			  flag_alerte_systeme_detecte = 1 ;
 			}
@@ -353,40 +399,17 @@ function F_Send_Request()
 			else
 			{
 			  flag_alerte_temperature_systeme_detecte = 0 ;
-			}*/
+			}
 			
-			
-		  /*      if((flag_alerte_temperature_detecte == 1) && (flag_alerte_temperature_detecte_1 == 0))
-			{
-				if((chaine_alerte.charAt(3) != 0) && (chaine_alerte.charAt(3) != 5))
-				{
-					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, temperature of the spool too High, unwind micro-tether" ;
-				}
-				if(chaine_alerte.charAt(3) == 5)
-				{
-					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, temperature of the spool is too High, system will shut down, land your drone" ;
-				}
-			}*/
-			
-		/*	if((flag_alerte_longueur_detecte == 1) && (flag_alerte_longueur_detecte_1 == 0))
-			{
-				if((chaine_alerte.charAt(4) != 0) && (chaine_alerte.charAt(4) != 5))
-				{
-					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, micro-tether lenght closed to the maximum value, lower drone altitude" ;
-				}
-				if(chaine_alerte.charAt(4) == 5)
-				{
-					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, cable lenght reached the maximum value, lower drone altitude" ;
-				}
-			}*/
-			
-		/*	if((flag_alerte_temperature_systeme_detecte == 1) && (flag_alerte_temperature_systeme_detecte_1 == 0))
+			if((flag_alerte_temperature_systeme_detecte == 1) && (flag_alerte_temperature_systeme_detecte_1 == 0))
 			{
 				if(chaine_alerte.charAt(2) == 5)
 				{
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, temperature of the system is too High, system will shut down, land your drone" ;
+					document.getElementById('notifRectangle').style.color = '#DB1423' ;
+		          		document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
 				}
-			}*/
+			}
 			
 				
 		/*	if((flag_alerte_systeme_detecte == 1) && (flag_alerte_systeme_detecte_1 == 0))
@@ -416,8 +439,6 @@ function F_Send_Request()
 			|| (flag_alarme_longueur_detecte == 0) && (flag_alarme_longueur_detecte_1 == 1))
 			
 			{
-			//	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
-			//	document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
 				document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		        }
 			
