@@ -181,7 +181,7 @@ function F_Send_Request()
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
-			
+			document.getElementById('notifRectangle').innerHTML = reponse_text ;
 			if(chaine_alerte.charAt(3) != 0)
 			{
 			  flag_alerte_temperature_detecte = 1 ;
