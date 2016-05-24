@@ -211,7 +211,7 @@ function F_Send_Request()
 		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
 			}
 			
-		/*-	if(chaine_alerte.charAt(4) != 0)
+			if(chaine_alerte.charAt(4) != 0)
 			{
 			  flag_alerte_longueur_detecte = 1 ;
 			  document.getElementById('LONGUEUR').style.color = '#DB1423' ;
@@ -221,10 +221,6 @@ function F_Send_Request()
 			else
 			{
 		          flag_alerte_longueur_detecte = 0 ;
-		          if((flag_alerte_detecte == 0) && (flag_alerte_detecte_1 == 1))
-		          {
-		          	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
-			  }
 		          document.getElementById('LONGUEUR').style.color = '#888888' ;
 		          document.getElementById('LONGUEUR').style.backgroundColor = '#E5E5E6' ;
 		          carre_1[4].style.backgroundColor = '#E5E5E6' ;
@@ -244,9 +240,7 @@ function F_Send_Request()
 			else
 			{
 			  flag_alerte_systeme_detecte = 0 ;
-			}*/
-			
-			
+			}
 			
 			if((flag_alerte_puissance_detecte == 1) && (flag_alerte_puissance_detecte_1 == 0))
 			{
@@ -259,11 +253,7 @@ function F_Send_Request()
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, power consumption too High system will shut down, land your drone" ;
 				}
 			}
-		/*	if((flag_alerte_detecte == 0) && (flag_alerte_detecte_1 == 1))
-		        {
-		          	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
-			}*/
-			if((flag_alerte_temperature_detecte == 1) && (flag_alerte_temperature_detecte_1 == 0))
+		        if((flag_alerte_temperature_detecte == 1) && (flag_alerte_temperature_detecte_1 == 0))
 			{
 				if((chaine_alerte.charAt(3) != 0) && (chaine_alerte.charAt(3) != 5))
 				{
@@ -274,11 +264,8 @@ function F_Send_Request()
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, temperature of the spool is too High, system will shut down, land your drone" ;
 				}
 			}
-			if((flag_alerte_temperature_detecte == 0) && (flag_alerte_temperature_detecte_1 == 1))
-			{
-				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
-			}
-		/*	if((flag_alerte_longueur_detecte == 1) && (flag_alerte_longueur_detecte_1 == 0))
+			
+			if((flag_alerte_longueur_detecte == 1) && (flag_alerte_longueur_detecte_1 == 0))
 			{
 				if((chaine_alerte.charAt(4) != 0) && (chaine_alerte.charAt(4) != 5))
 				{
@@ -296,6 +283,7 @@ function F_Send_Request()
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, temperature of the system is too High, system will shut down, land your drone" ;
 				}
 			}
+			
 			if((flag_alerte_systeme_detecte == 1) && (flag_alerte_systeme_detecte_1 == 0))
 			{
 				if(chaine_alerte.charAt(0) == 1)
@@ -306,7 +294,13 @@ function F_Send_Request()
 				{
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, cable cut or onboard module failure, system will shut down, land your drone" ;
 				}
-			}*/
+			}
+			
+			if((flag_alerte_temperature_detecte == 0) && (flag_alerte_temperature_detecte_1 == 1))
+			{
+				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
+			}
+			
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
 			flag_alerte_longueur_detecte_1 = flag_alerte_longueur_detecte ;
 			flag_alerte_temperature_detecte_1 = flag_alerte_temperature_detecte ;
