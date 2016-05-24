@@ -215,25 +215,18 @@ function F_Send_Request()
 			  document.getElementById('PUISSANCE').style.backgroundColor = '#E3BDBF' ;
 			  carre_1[2].style.backgroundColor = '#E3BDBF' ;
 			}
-			else
-			{
-		          flag_alerte_puissance_detecte = 0 ;
-		          document.getElementById('PUISSANCE').style.color = '#888888' ;
-		          document.getElementById('PUISSANCE').style.backgroundColor = '#E5E5E6' ;
-		          document.getElementById('notifRectangle').style.color = '#112330' ;
-		          document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
-		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
-			}
-			
-			if(chaine_alerte.charAt(1) == 5)
+			else if(chaine_alerte.charAt(1) == 5)
 			{
 			  flag_alarme_puissance_detecte = 1 ;
 			  document.getElementById('PUISSANCE').style.color = '#DB1423' ;
 			  document.getElementById('PUISSANCE').style.backgroundColor = '#E3BDBF' ;
 			  carre_1[2].style.backgroundColor = '#E3BDBF' ;
+			  document.getElementById('notifRectangle').style.color = '#DB1423' ;
+		          document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
 			}
 			else
 			{
+		          flag_alerte_puissance_detecte = 0 ;
 		          flag_alarme_puissance_detecte = 0 ;
 		          document.getElementById('PUISSANCE').style.color = '#888888' ;
 		          document.getElementById('PUISSANCE').style.backgroundColor = '#E5E5E6' ;
@@ -241,6 +234,8 @@ function F_Send_Request()
 		          document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
 			}
+			
+		
 			
 		/*	if(chaine_alerte.charAt(4) != 0)
 			{
