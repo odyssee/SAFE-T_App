@@ -353,12 +353,12 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 			}
 			
-			if((flag_alarme_temperature_detecte == 0) && (flag_alarme_temperature_detecte_1 == 1)
+		/*	if((flag_alarme_temperature_detecte == 0) && (flag_alarme_temperature_detecte_1 == 1)
 			|| (flag_alarme_puissance_detecte == 0) && (flag_alarme_puissance_detecte_1 == 1)
 			|| (flag_alarme_longueur_detecte == 0) && (flag_alarme_longueur_detecte_1 == 1))
 			{
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
-			}
+			}*/
 			
 			
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
