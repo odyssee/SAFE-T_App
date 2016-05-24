@@ -415,7 +415,7 @@ function F_Send_Request()
 			{
 			//	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 			//	document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
-				document.getElementById('notifRectangle').style.color = '#112330' ;
+				document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		        }
 			
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
