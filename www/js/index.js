@@ -273,14 +273,14 @@ function F_Send_Request()
 			  flag_alarme_temperature_detecte = 0 ;
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
 			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
-			  carre_1[2].style.backgroundColor = '#E3BDBF' ;
+			  carre_1[1].style.backgroundColor = '#E3BDBF' ;
 			}
 			else if(chaine_alerte.charAt(3) == 5)
 			{
 			  flag_alarme_temperature_detecte = 1 ;
 			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
 			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
-			  carre_1[2].style.backgroundColor = '#E3BDBF' ;
+			  carre_1[1].style.backgroundColor = '#E3BDBF' ;
 			  document.getElementById('notifRectangle').style.color = '#DB1423' ;
 		          document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
 			}
@@ -292,7 +292,7 @@ function F_Send_Request()
 		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
 		          document.getElementById('notifRectangle').style.color = '#112330' ;
 		          document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
-		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
+		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
 			}
 			
 			if((flag_alerte_temperature_detecte == 1) && (flag_alerte_temperature_detecte_1 == 0))
@@ -316,7 +316,7 @@ function F_Send_Request()
 			{
 			  	document.getElementById('notifRectangle').style.color = '#DB1423' ;
 			        document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
-				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, temperature of the spool too High, unwind micro-tether" ; ;
+				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, temperature of the spool too High, unwind micro-tether" ; 
 			}
 			
 		/*	if(chaine_alerte.charAt(4) != 0)
@@ -398,14 +398,7 @@ function F_Send_Request()
 				}
 			}*/
 			
-			if((flag_alerte_temperature_detecte == 0) && (flag_alerte_temperature_detecte_1 == 1)
-			|| (flag_alerte_puissance_detecte == 0) && (flag_alerte_puissance_detecte_1 == 1)
-			|| (flag_alerte_longueur_detecte == 0) && (flag_alerte_longueur_detecte_1 == 1))
-			{
-				document.getElementById('notifRectangle').style.color = '#112330' ;
-			        document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
-				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
-			}
+		
 			
 		/*	if((flag_alarme_temperature_detecte == 0) && (flag_alarme_temperature_detecte_1 == 1)
 			|| (flag_alarme_puissance_detecte == 0) && (flag_alarme_puissance_detecte_1 == 1)
