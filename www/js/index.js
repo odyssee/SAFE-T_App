@@ -211,7 +211,7 @@ function F_Send_Request()
 			/*****************************************/
 			/*               Puissance               */
 			/*****************************************/
-			if((chaine_alerte.charAt(1) != 0) && (chaine_alerte.charAt(1) != 5))
+		/*	if((chaine_alerte.charAt(1) != 0) && (chaine_alerte.charAt(1) != 5))
 			{
 			  flag_alerte_puissance_detecte = 1 ;
 			  flag_alarme_puissance_detecte = 0 ;
@@ -261,7 +261,7 @@ function F_Send_Request()
 			  	document.getElementById('notifRectangle').style.color = '#DB1423' ;
 			        document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, power consumption too High" ;
-			}
+			}*/
 		
 		
 			/*****************************************/
