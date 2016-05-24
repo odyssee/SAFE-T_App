@@ -181,7 +181,7 @@ function F_Send_Request()
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
-			document.getElementById('notifRectangle').innerHTML = reponse_text ;
+			
 			if(chaine_alerte.charAt(3) != 0)
 			{
 			  flag_alerte_temperature_detecte = 1 ;
@@ -208,6 +208,8 @@ function F_Send_Request()
 		          flag_alerte_puissance_detecte = 0 ;
 		          document.getElementById('PUISSANCE').style.color = '#888888' ;
 		          document.getElementById('PUISSANCE').style.backgroundColor = '#E5E5E6' ;
+		          document.getElementById('notifRectangle').style.color = '#888888' ;
+		          document.getElementById('notifRectangle').style.backgroundColor = '#E5E5E6' ;
 		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
 			}
 			
@@ -246,10 +248,13 @@ function F_Send_Request()
 			{
 			  	if((chaine_alerte.charAt(1) != 0) && (chaine_alerte.charAt(1) != 5))
 				{
-					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, power consumption too High" ;
+					document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			                document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, power consumption too High" ;
 				}
 				if(chaine_alerte.charAt(1) == 5)
 				{
+					document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			                document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, power consumption too High system will shut down, land your drone" ;
 				}
 			}
