@@ -193,21 +193,7 @@ function F_Send_Request()
 			document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
 			
-		/*	if(chaine_alerte.charAt(3) != 0)
-			{
-			  flag_alerte_temperature_detecte = 1 ;
-			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
-			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
-			  carre_1[1].style.backgroundColor = '#E3BDBF' ;
-			}
-			else
-			{
-		          flag_alerte_temperature_detecte = 0 ;
-		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
-		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
-		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
-			}*/
-			
+		
 			/*****************************************/
 			/*               Puissance               */
 			/*****************************************/
@@ -383,7 +369,7 @@ function F_Send_Request()
 			
 		
 			
-			if(chaine_alerte.charAt(0) != 0)
+	/*		if(chaine_alerte.charAt(0) != 0)
 			{
 			  flag_alarme_systeme_detecte = 1 ;
 			}
