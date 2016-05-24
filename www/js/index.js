@@ -278,6 +278,10 @@ function F_Send_Request()
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, temperature of the spool is too High, system will shut down, land your drone" ;
 				}
 			}
+			if((flag_alerte_temperature_detecte == 0) && (flag_alerte_temperature_detecte_1 == 1))
+			{
+				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
+			}
 		/*	if((flag_alerte_longueur_detecte == 1) && (flag_alerte_longueur_detecte_1 == 0))
 			{
 				if((chaine_alerte.charAt(4) != 0) && (chaine_alerte.charAt(4) != 5))
