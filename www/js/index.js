@@ -234,8 +234,8 @@ function F_Send_Request()
 		          flag_alarme_puissance_detecte = 0 ;
 		          document.getElementById('PUISSANCE').style.color = '#888888' ;
 		          document.getElementById('PUISSANCE').style.backgroundColor = '#E5E5E6' ;
-		 /*         document.getElementById('notifRectangle').style.color = '#112330' ;
-		          document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;*/
+		 //         document.getElementById('notifRectangle').style.color = '#112330' ;
+		          document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
 			}
 			
@@ -290,8 +290,8 @@ function F_Send_Request()
 		          flag_alarme_temperature_detecte = 0 ;
 		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
 		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
-		     /*     document.getElementById('notifRectangle').style.color = '#112330' ;
-		          document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;*/
+		     //     document.getElementById('notifRectangle').style.color = '#112330' ;
+		          document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
 			}
 			
@@ -406,7 +406,7 @@ function F_Send_Request()
 			{
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 				document.getElementById('notifRectangle').style.color = '#112330' ;
-		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
+		          	
 			}
 			
 			
