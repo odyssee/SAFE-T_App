@@ -347,6 +347,8 @@ function F_Send_Request()
 			|| (flag_alerte_puissance_detecte == 0) && (flag_alerte_puissance_detecte_1 == 1)
 			|| (flag_alerte_longueur_detecte == 0) && (flag_alerte_longueur_detecte_1 == 1))
 			{
+				document.getElementById('notifRectangle').style.color = '#112330' ;
+			        document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 			}
 			
