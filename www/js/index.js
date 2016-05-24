@@ -208,8 +208,8 @@ function F_Send_Request()
 		          flag_alerte_puissance_detecte = 0 ;
 		          document.getElementById('PUISSANCE').style.color = '#888888' ;
 		          document.getElementById('PUISSANCE').style.backgroundColor = '#E5E5E6' ;
-		          document.getElementById('notifRectangle').style.color = '#888888' ;
-		          document.getElementById('notifRectangle').style.backgroundColor = '#E5E5E6' ;
+		          document.getElementById('notifRectangle').style.color = '#112330' ;
+		          document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
 			}
 			
