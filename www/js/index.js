@@ -208,6 +208,9 @@ function F_Send_Request()
 		          carre_1[1].style.backgroundColor = '#E5E5E6' ;
 			}*/
 			
+			/*****************************************/
+			/*               Puissance               */
+			/*****************************************/
 			if((chaine_alerte.charAt(1) != 0) && (chaine_alerte.charAt(1) != 5))
 			{
 			  flag_alerte_puissance_detecte = 1 ;
@@ -236,7 +239,85 @@ function F_Send_Request()
 		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
 			}
 			
+			if((flag_alerte_puissance_detecte == 1) && (flag_alerte_puissance_detecte_1 == 0))
+			{
+			  	if((chaine_alerte.charAt(1) != 0) && (chaine_alerte.charAt(1) != 5))
+				{
+					document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			                document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, power consumption too High" ;
+				}
+			}
+			if((flag_alarme_puissance_detecte == 1) && (flag_alarme_puissance_detecte_1 == 0))
+			{
+			  	if(chaine_alerte.charAt(1) == 5)
+				{
+					document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			                document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, power consumption too High system will shut down, land your drone" ;
+				}
+			}
+			if((flag_alarme_puissance_detecte == 0) && (flag_alarme_puissance_detecte_1 == 1))
+			{
+			  	document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			        document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
+				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, power consumption too High" ;
+			}
 		
+		
+			/*****************************************/
+			/*               Temperature             */
+			/*****************************************/
+			if((chaine_alerte.charAt(3) != 0) && (chaine_alerte.charAt(3) != 5))
+			{
+			  flag_alerte_temperature_detecte = 1 ;
+			  flag_alarme_temperature_detecte = 0 ;
+			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
+			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
+			  carre_1[2].style.backgroundColor = '#E3BDBF' ;
+			}
+			else if(chaine_alerte.charAt(3) == 5)
+			{
+			  flag_alarme_temperature_detecte = 1 ;
+			  document.getElementById('TEMPERATURE').style.color = '#DB1423' ;
+			  document.getElementById('TEMPERATURE').style.backgroundColor = '#E3BDBF' ;
+			  carre_1[2].style.backgroundColor = '#E3BDBF' ;
+			  document.getElementById('notifRectangle').style.color = '#DB1423' ;
+		          document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
+			}
+			else
+			{
+		          flag_alerte_temperature_detecte = 0 ;
+		          flag_alarme_temperature_detecte = 0 ;
+		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
+		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
+		          document.getElementById('notifRectangle').style.color = '#112330' ;
+		          document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
+		          carre_1[2].style.backgroundColor = '#E5E5E6' ;
+			}
+			
+			if((flag_alerte_temperature_detecte == 1) && (flag_alerte_temperature_detecte_1 == 0))
+			{
+			  	if((chaine_alerte.charAt(3) != 0) && (chaine_alerte.charAt(3) != 5))
+				{
+					document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			                document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, temperature of the spool too High, unwind micro-tether" ; ;
+				}
+			}
+			if((flag_alarme_temperature_detecte == 1) && (flag_alarme_temperature_detecte_1 == 0))
+			{
+			  	if(chaine_alerte.charAt(3) == 5)
+				{
+					document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			                document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
+					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, temperature of the spool is too High, system will shut down, land your drone" ;
+				}
+			}
+			if((flag_alarme_temperature_detecte == 0) && (flag_alarme_temperature_detecte_1 == 1))
+			{
+			  	document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			        document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
+				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, temperature of the spool too High, unwind micro-tether" ; ;
+			}
 			
 		/*	if(chaine_alerte.charAt(4) != 0)
 			{
@@ -270,33 +351,6 @@ function F_Send_Request()
 			{
 			  flag_alerte_temperature_systeme_detecte = 0 ;
 			}*/
-			
-			/*****************************************/
-			/*               Puissance               */
-			/*****************************************/
-			if((flag_alerte_puissance_detecte == 1) && (flag_alerte_puissance_detecte_1 == 0))
-			{
-			  	if((chaine_alerte.charAt(1) != 0) && (chaine_alerte.charAt(1) != 5))
-				{
-					document.getElementById('notifRectangle').style.color = '#DB1423' ;
-			                document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, power consumption too High" ;
-				}
-			}
-			if((flag_alarme_puissance_detecte == 1) && (flag_alarme_puissance_detecte_1 == 0))
-			{
-			  	if(chaine_alerte.charAt(1) == 5)
-				{
-					document.getElementById('notifRectangle').style.color = '#DB1423' ;
-			                document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
-					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, power consumption too High system will shut down, land your drone" ;
-				}
-			}
-			if((flag_alarme_puissance_detecte == 0) && (flag_alarme_puissance_detecte_1 == 1))
-			{
-			  	document.getElementById('notifRectangle').style.color = '#DB1423' ;
-			        document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
-				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Warning, power consumption too High" ;
-			}
 			
 			
 		  /*      if((flag_alerte_temperature_detecte == 1) && (flag_alerte_temperature_detecte_1 == 0))
