@@ -397,20 +397,20 @@ function F_Send_Request()
 			  flag_alarme_systeme_detecte = 1 ;
 			  document.getElementById('notifRectangle').style.color = '#DB1423' ;
 		          document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
-			}/*
+			}
 			else
 			{
 			  flag_alarme_systeme_detecte = 0 ;
 			  if((flag_alerte_puissance_detecte == 0)
 		          && (flag_alerte_temperature_detecte == 0)
 		          && (flag_alerte_longueur_detecte == 0)
-		          && (flag_alerte_temperature_systeme == 0))
+		          && (flag_alerte_temperature_systeme_detecte == 0))
 		          {
 		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		          	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 		          	document.getElementById('notifRectangle').style.color = '#112330' ;
 		          }
-			}*/
+			}
 			
 			if(chaine_alerte.charAt(2) == 5)
 			{
