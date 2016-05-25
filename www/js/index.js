@@ -378,7 +378,7 @@ function F_Send_Request()
 			{
 			  flag_alarme_systeme_detecte = 0 ;
 			  
-			}
+			}*/
 			
 			if(chaine_alerte.charAt(2) == 5)
 			{
@@ -387,10 +387,10 @@ function F_Send_Request()
 			else
 			{
 			  flag_alarme_temperature_systeme_detecte = 0 ;
-			}*/
+			}
 			
 			
-	/*		if((flag_alarme_temperature_systeme_detecte == 1) && (flag_alarme_temperature_systeme_detecte_1 == 0))
+			if((flag_alarme_temperature_systeme_detecte == 1) && (flag_alarme_temperature_systeme_detecte_1 == 0))
 			{
 				if(chaine_alerte.charAt(2) == 5)
 				{
@@ -399,7 +399,7 @@ function F_Send_Request()
 		          		document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
 		          		
 				}
-			}*/
+			}
 			
 				
 		/*	if((flag_alerte_systeme_detecte == 1) && (flag_alerte_systeme_detecte_1 == 0))
