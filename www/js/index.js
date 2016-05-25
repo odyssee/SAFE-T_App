@@ -228,7 +228,8 @@ function F_Send_Request()
 		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		          }
 		          if((flag_alerte_temperature_detecte == 0 )
-		          && (flag_alerte_longueur_detecte == 0))
+		          && (flag_alerte_longueur_detecte == 0)
+		          && (flag_alarme_temperature_systeme_detecte == 0))
 		          {
 		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		          	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
