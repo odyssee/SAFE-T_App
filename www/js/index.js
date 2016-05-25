@@ -431,7 +431,7 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 				document.getElementById('notifRectangle').style.color = '#112330' ;	
 			}
-			
+			flag_alarme_temperature_systeme_detecte_1 = flag_alarme_temperature_systeme_detecte ;
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
 			flag_alerte_longueur_detecte_1 = flag_alerte_longueur_detecte ;
 			flag_alerte_temperature_detecte_1 = flag_alerte_temperature_detecte ;
@@ -441,7 +441,7 @@ function F_Send_Request()
 			flag_alarme_puissance_detecte_1 = flag_alarme_puissance_detecte ;
 			flag_alarme_longueur_detecte_1 = flag_alarme_longueur_detecte ;
 			flag_alarme_temperature_detecte_1 = flag_alarme_temperature_detecte ;
-			flag_alarme_temperature_systeme_detecte_1 = flag_alarme_temperature_systeme_detecte ;
+			
 			flag_alarme_systeme_detecte_1 = flag_alarme_systeme_detecte ;
 		};
 		xhr.send(null) ;
