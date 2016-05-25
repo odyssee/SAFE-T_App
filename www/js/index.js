@@ -415,7 +415,8 @@ function F_Send_Request()
 			  flag_alarme_systeme_detecte = 0 ;
 			  if((flag_alerte_puissance_detecte == 0)
 		          && (flag_alerte_temperature_detecte == 0)
-		          && (flag_alerte_longueur_detecte == 0))
+		          && (flag_alerte_longueur_detecte == 0)
+		          && (flag_alerte_temperature_systeme == 0))
 		          {
 		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		          	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
@@ -468,19 +469,7 @@ function F_Send_Request()
 				}
 			}
 				
-		/*	if((flag_alerte_systeme_detecte == 1) && (flag_alerte_systeme_detecte_1 == 0))
-			{
-				if(chaine_alerte.charAt(0) == 1)
-				{
-					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, short-circuit detected, system will shut down, land your drone" ;
-				}
-				if(chaine_alerte.charAt(0) == 2)
-				{
-					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, cable cut or onboard module failure, system will shut down, land your drone" ;
-				}
-			}*/
-			
-			
+		
 			if((flag_alerte_temperature_detecte == 0) && (flag_alerte_temperature_detecte_1 == 1)
 			|| (flag_alerte_puissance_detecte == 0) && (flag_alerte_puissance_detecte_1 == 1)
 			|| (flag_alerte_longueur_detecte == 0) && (flag_alerte_longueur_detecte_1 == 1)
