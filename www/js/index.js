@@ -415,7 +415,7 @@ function F_Send_Request()
 			if((flag_alerte_temperature_detecte == 0) && (flag_alerte_temperature_detecte_1 == 1)
 			|| (flag_alerte_puissance_detecte == 0) && (flag_alerte_puissance_detecte_1 == 1)
 			|| (flag_alerte_longueur_detecte == 0) && (flag_alerte_longueur_detecte_1 == 1)
-			|| flag_alarme_temperature_systeme == 0)
+			|| (flag_alarme_temperature_systeme == 0) && (flag_alarme_temperature_systeme_1 == 1))
 			{
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 				document.getElementById('notifRectangle').style.color = '#112330' ;
@@ -423,7 +423,7 @@ function F_Send_Request()
 			if((flag_alarme_temperature_detecte == 0) && (flag_alarme_temperature_detecte_1 == 1)
 			|| (flag_alarme_puissance_detecte == 0) && (flag_alarme_puissance_detecte_1 == 1)
 			|| (flag_alarme_longueur_detecte == 0) && (flag_alarme_longueur_detecte_1 == 1)
-			|| flag_alarme_temperature_systeme == 0)
+			|| (flag_alarme_temperature_systeme == 0) && (flag_alarme_temperature_systeme_1 == 1))
 			{
 				document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		        }
