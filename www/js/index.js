@@ -184,14 +184,14 @@ function F_Send_Request()
 			reponse_text = xhr.responseText ;
 			reponse_text_Array = reponse_text.split("-");
 			chaine_alerte = reponse_text_Array[10] ;
-			
+			flag_alarme_temperature_systeme_detecte_1 = 1 ;
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
 			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
 			document.getElementById('VITESSE').innerHTML = reponse_text_Array[9]+"m/s" ;
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			//document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
-			document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte + ' ' + flag_alarme_temperature_systeme_detecte_1  ;
+			document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte_1 + ' ' + flag_alarme_temperature_systeme_detecte  ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
 			
 		
@@ -432,7 +432,7 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 				document.getElementById('notifRectangle').style.color = '#112330' ;	
 			}
-			flag_alarme_temperature_systeme_detecte_1 = 1 ;
+			
 			
 			
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
