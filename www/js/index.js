@@ -370,7 +370,7 @@ function F_Send_Request()
 			
 		
 			
-			if(chaine_alerte.charAt(0) != 0)
+		/*	if(chaine_alerte.charAt(0) != 0)
 			{
 			  flag_alarme_systeme_detecte = 1 ;
 			  flag_alarme_temperature_systeme_detecte_1 = 5 ;
@@ -388,7 +388,7 @@ function F_Send_Request()
 			else
 			{
 			  flag_alarme_temperature_systeme_detecte = 0 ;
-			}
+			}*/
 			
 			
 			if((flag_alarme_temperature_systeme_detecte == 1) && (flag_alarme_temperature_systeme_detecte_1 == 0))
@@ -417,21 +417,21 @@ function F_Send_Request()
 			
 			flag_alarme_temperature_systeme_detecte_1 = 7 ;
 			
-		/*	if(((flag_alerte_temperature_detecte == 0) && (flag_alerte_temperature_detecte_1 == 1))
+			if(((flag_alerte_temperature_detecte == 0) && (flag_alerte_temperature_detecte_1 == 1))
 			|| ((flag_alerte_puissance_detecte == 0) && (flag_alerte_puissance_detecte_1 == 1))
 			|| ((flag_alerte_longueur_detecte == 0) && (flag_alerte_longueur_detecte_1 == 1)))
 			{
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 				document.getElementById('notifRectangle').style.color = '#112330' ;
-		        }*/
+		        }
 		        
-		/*	if(((flag_alarme_temperature_detecte == 0) && (flag_alarme_temperature_detecte_1 == 1))
+			if(((flag_alarme_temperature_detecte == 0) && (flag_alarme_temperature_detecte_1 == 1))
 			|| ((flag_alarme_puissance_detecte == 0) && (flag_alarme_puissance_detecte_1 == 1))
 			|| ((flag_alarme_longueur_detecte == 0) && (flag_alarme_longueur_detecte_1 == 1))
 			|| ((flag_alarme_temperature_systeme == 0) && (flag_alarme_temperature_systeme_1 == 1)))
 			{
 				document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
-		        }*/
+		        }
 			
 			if((flag_alarme_temperature_systeme_detecte == 0) && (flag_alarme_temperature_systeme_detecte_1 == 1))
 			{
