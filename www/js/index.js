@@ -194,7 +194,7 @@ function F_Send_Request()
 			document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte_1 + ' ' + flag_alarme_temperature_systeme_detecte  ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
 			
-			flag_alarme_temperature_systeme_detecte_1 = 1 ;
+			
 			/*****************************************/
 			/*               Puissance               */
 			/*****************************************/
@@ -217,7 +217,6 @@ function F_Send_Request()
 			}
 			else
 			{
-		          flag_alarme_temperature_systeme_detecte_1 = 2 ;
 		          flag_alerte_puissance_detecte = 0 ;
 		          flag_alarme_puissance_detecte = 0 ;
 		          document.getElementById('PUISSANCE').style.color = '#888888' ;
@@ -273,7 +272,7 @@ function F_Send_Request()
 			}
 			else
 			{
-		          flag_alarme_temperature_systeme_detecte_1 = 3 ;
+		          
 		          flag_alerte_temperature_detecte = 0 ;
 		          flag_alarme_temperature_detecte = 0 ;
 		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
@@ -331,11 +330,11 @@ function F_Send_Request()
 			}
 			else
 			{
-		          flag_alarme_temperature_systeme_detecte_1 = 4 ;
+		          
 		          flag_alerte_longueur_detecte = 0 ;
 		          flag_alarme_longueur_detecte = 0 ;
-		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
-		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
+		          document.getElementById('LONGUEUR').style.color = '#888888' ;
+		          document.getElementById('LONGUEUR').style.backgroundColor = '#E5E5E6' ;
 		          if((flag_alarme_puissance_detecte == 0)
 		          && (flag_alarme_temperature_detecte == 0))
 		          {
@@ -373,12 +372,12 @@ function F_Send_Request()
 		/*	if(chaine_alerte.charAt(0) != 0)
 			{
 			  flag_alarme_systeme_detecte = 1 ;
-			  flag_alarme_temperature_systeme_detecte_1 = 5 ;
+			  
 			}
 			else
 			{
 			  flag_alarme_systeme_detecte = 0 ;
-			  flag_alarme_temperature_systeme_detecte_1 = 6 ;
+			  
 			}
 			
 			if(chaine_alerte.charAt(2) == 5)
@@ -433,11 +432,11 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		        }
 			
-			if((flag_alarme_temperature_systeme_detecte == 0) && (flag_alarme_temperature_systeme_detecte_1 == 1))
+		/*	if((flag_alarme_temperature_systeme_detecte == 0) && (flag_alarme_temperature_systeme_detecte_1 == 1))
 			{
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 				document.getElementById('notifRectangle').style.color = '#112330' ;	
-			}
+			}*/
 			
 			flag_alarme_temperature_systeme_detecte_1 = 8 ;
 			
