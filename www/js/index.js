@@ -191,7 +191,7 @@ function F_Send_Request()
 			document.getElementById('VITESSE').innerHTML = reponse_text_Array[9]+"m/s" ;
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			//document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
-			document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte_1 + ' ' + flag_alarme_temperature_systeme_detecte  ;
+			
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
 			
 		
@@ -433,7 +433,7 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').style.color = '#112330' ;	
 			}
 			
-			
+			document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte_1 + ' ' + flag_alarme_temperature_systeme_detecte  ;
 			
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
 			flag_alerte_longueur_detecte_1 = flag_alerte_longueur_detecte ;
