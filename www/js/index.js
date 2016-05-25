@@ -224,7 +224,8 @@ function F_Send_Request()
 		 	  if((flag_alarme_temperature_detecte == 0 )
 		          && (flag_alarme_temperature_systeme_detecte == 0)
 		          && (flag_alarme_longueur_detecte == 0)
-		          && (flag_alarme_systeme_detecte == 0))
+		         // && (flag_alarme_systeme_detecte == 0)
+		         )
 		          {
 		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		          }
@@ -294,7 +295,8 @@ function F_Send_Request()
 		          if((flag_alarme_puissance_detecte == 0 )
 		          && (flag_alarme_temperature_systeme_detecte == 0)
 		          && (flag_alarme_longueur_detecte == 0)
-		          && (flag_alarme_systeme_detecte == 0))
+		          //&& (flag_alarme_systeme_detecte == 0)
+		          )
 		          {
 		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		         }
@@ -363,7 +365,8 @@ function F_Send_Request()
 		          if((flag_alarme_puissance_detecte == 0)
 		          && (flag_alarme_temperature_detecte == 0)
 		          && (flag_alarme_temperature_systeme_detecte == 0)
-		          && (flag_alarme_systeme_detecte == 0))
+		          //&& (flag_alarme_systeme_detecte == 0)
+		          )
 		          {
 		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		          }
@@ -454,7 +457,7 @@ function F_Send_Request()
 		          	}
 			}
 			
-			if((flag_alarme_systeme_detecte == 1) && (flag_alarme_systeme_detecte_1 == 0))
+		/*	if((flag_alarme_systeme_detecte == 1) && (flag_alarme_systeme_detecte_1 == 0))
 			{
 				document.getElementById('notifRectangle').style.color = '#DB1423' ;
 		          	document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
@@ -466,7 +469,7 @@ function F_Send_Request()
 				{
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, cable cut or onboard module failure, system will shut down, land your drone" ;
 				}
-			}
+			}*/
 				
 		
 			if((flag_alerte_temperature_detecte == 0) && (flag_alerte_temperature_detecte_1 == 1)
@@ -478,20 +481,7 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').style.color = '#112330' ;
 		        }
 		        
-		/*	if((flag_alarme_temperature_detecte == 0) && (flag_alarme_temperature_detecte_1 == 1)
-			|| (flag_alarme_puissance_detecte == 0) && (flag_alarme_puissance_detecte_1 == 1)
-			|| (flag_alarme_longueur_detecte == 0) && (flag_alarme_longueur_detecte_1 == 1)
-			|| (flag_alarme_temperature_systeme == 0) && (flag_alarme_temperature_systeme_1 == 1))
-			{
-				document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
-		        }*/
-			
-		/*	if((flag_alarme_temperature_systeme_detecte == 0) && (flag_alarme_temperature_systeme_detecte_1 == 1))
-			{
-				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
-				document.getElementById('notifRectangle').style.color = '#112330' ;	
-			}*/
-			
+		
 			
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
 			flag_alerte_longueur_detecte_1 = flag_alerte_longueur_detecte ;
