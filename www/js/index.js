@@ -425,7 +425,7 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		        }
 			
-			if((flag_alarme_temperature_systeme == 0) && (flag_alarme_temperature_systeme_1 == 1))
+			if((flag_alarme_temperature_systeme_detecte == 0) && (flag_alarme_temperature_systeme_detecte_1 == 1))
 			{
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 				document.getElementById('notifRectangle').style.color = '#112330' ;	
