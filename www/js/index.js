@@ -277,7 +277,8 @@ function F_Send_Request()
 		          flag_alarme_temperature_detecte = 0 ;
 		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
 		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
-		          if(flag_alarme_puissance_detecte == 0 )
+		          if((flag_alarme_puissance_detecte == 0 )
+		          && (flag_alarme_temperature_systeme_detecte == 0))
 		          {
 		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
 		          }
