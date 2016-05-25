@@ -184,17 +184,17 @@ function F_Send_Request()
 			reponse_text = xhr.responseText ;
 			reponse_text_Array = reponse_text.split("-");
 			chaine_alerte = reponse_text_Array[10] ;
-			flag_alarme_temperature_systeme_detecte_1 = 1 ;
+			
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
 			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
 			document.getElementById('VITESSE').innerHTML = reponse_text_Array[9]+"m/s" ;
 			document.getElementById('LONGUEUR').innerHTML = reponse_text_Array[7]+'m' ;
 			//document.getElementById('COUPLE').innerHTML = reponse_text_Array[8]+'%' ;
-			
+			document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte_1 + ' ' + flag_alarme_temperature_systeme_detecte  ;
 			document.getElementById('HEURES_TOTALES').innerHTML = reponse_text_Array[3] ;
 			
-		
+			flag_alarme_temperature_systeme_detecte_1 = 1 ;
 			/*****************************************/
 			/*               Puissance               */
 			/*****************************************/
@@ -217,6 +217,7 @@ function F_Send_Request()
 			}
 			else
 			{
+		          flag_alarme_temperature_systeme_detecte_1 = 2 ;
 		          flag_alerte_puissance_detecte = 0 ;
 		          flag_alarme_puissance_detecte = 0 ;
 		          document.getElementById('PUISSANCE').style.color = '#888888' ;
@@ -272,6 +273,7 @@ function F_Send_Request()
 			}
 			else
 			{
+		          flag_alarme_temperature_systeme_detecte_1 = 3 ;
 		          flag_alerte_temperature_detecte = 0 ;
 		          flag_alarme_temperature_detecte = 0 ;
 		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
@@ -329,11 +331,11 @@ function F_Send_Request()
 			}
 			else
 			{
+		          flag_alarme_temperature_systeme_detecte_1 = 4 ;
 		          flag_alerte_longueur_detecte = 0 ;
 		          flag_alarme_longueur_detecte = 0 ;
 		          document.getElementById('TEMPERATURE').style.color = '#888888' ;
 		          document.getElementById('TEMPERATURE').style.backgroundColor = '#E5E5E6' ;
-		     //     document.getElementById('notifRectangle').style.color = '#112330' ;
 		          if((flag_alarme_puissance_detecte == 0)
 		          && (flag_alarme_temperature_detecte == 0))
 		          {
@@ -371,10 +373,12 @@ function F_Send_Request()
 			if(chaine_alerte.charAt(0) != 0)
 			{
 			  flag_alarme_systeme_detecte = 1 ;
+			  flag_alarme_temperature_systeme_detecte_1 = 5 ;
 			}
 			else
 			{
 			  flag_alarme_systeme_detecte = 0 ;
+			  flag_alarme_temperature_systeme_detecte_1 = 6 ;
 			}
 			
 			if(chaine_alerte.charAt(2) == 5)
@@ -394,6 +398,7 @@ function F_Send_Request()
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, temperature of the system is too High, system will shut down, land your drone" ;
 					document.getElementById('notifRectangle').style.color = '#DB1423' ;
 		          		document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
+		          		flag_alarme_temperature_systeme_detecte_1 = 7 ;
 				}
 			}
 			
@@ -433,7 +438,7 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').style.color = '#112330' ;	
 			}
 			
-			document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte_1 + ' ' + flag_alarme_temperature_systeme_detecte  ;
+			
 			
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
 			flag_alerte_longueur_detecte_1 = flag_alerte_longueur_detecte ;
