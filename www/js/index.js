@@ -426,6 +426,7 @@ function F_Send_Request()
 		          && (flag_alarme_longueur_detecte == 0))
 		          {
 		          	document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
+		          	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 		          }
 			}
 			
