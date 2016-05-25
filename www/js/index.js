@@ -424,13 +424,13 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').style.color = '#112330' ;
 		        }
 		        
-			if((flag_alarme_temperature_detecte == 0) && (flag_alarme_temperature_detecte_1 == 1)
+		/*	if((flag_alarme_temperature_detecte == 0) && (flag_alarme_temperature_detecte_1 == 1)
 			|| (flag_alarme_puissance_detecte == 0) && (flag_alarme_puissance_detecte_1 == 1)
 			|| (flag_alarme_longueur_detecte == 0) && (flag_alarme_longueur_detecte_1 == 1)
 			|| (flag_alarme_temperature_systeme == 0) && (flag_alarme_temperature_systeme_1 == 1))
 			{
 				document.getElementById('notifRectangle').style.backgroundColor = '#f2f9fc' ;
-		        }
+		        }*/
 			
 		/*	if((flag_alarme_temperature_systeme_detecte == 0) && (flag_alarme_temperature_systeme_detecte_1 == 1))
 			{
