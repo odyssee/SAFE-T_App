@@ -398,7 +398,7 @@ function F_Send_Request()
 					document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : Error, temperature of the system is too High, system will shut down, land your drone" ;
 					document.getElementById('notifRectangle').style.color = '#DB1423' ;
 		          		document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
-		          		flag_alarme_temperature_systeme_detecte_1 = 7 ;
+		          		
 				}
 			}
 			
@@ -415,7 +415,7 @@ function F_Send_Request()
 				}
 			}*/
 			
-		
+			flag_alarme_temperature_systeme_detecte_1 = 7 ;
 			
 			if((flag_alerte_temperature_detecte == 0) && (flag_alerte_temperature_detecte_1 == 1)
 			|| (flag_alerte_puissance_detecte == 0) && (flag_alerte_puissance_detecte_1 == 1)
@@ -438,7 +438,7 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').style.color = '#112330' ;	
 			}
 			
-			
+			flag_alarme_temperature_systeme_detecte_1 = 8 ;
 			
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
 			flag_alerte_longueur_detecte_1 = flag_alerte_longueur_detecte ;
