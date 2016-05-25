@@ -392,7 +392,7 @@ function F_Send_Request()
 			
 		
 			
-			if(chaine_alerte.charAt(0) != 0)
+		/*	if(chaine_alerte.charAt(0) != 0)
 			{
 			  flag_alarme_systeme_detecte = 1 ;
 			  document.getElementById('notifRectangle').style.color = '#DB1423' ;
@@ -410,7 +410,7 @@ function F_Send_Request()
 		          	document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 		          	document.getElementById('notifRectangle').style.color = '#112330' ;
 		          }
-			}
+			}*/
 			
 			if(chaine_alerte.charAt(2) == 5)
 			{
