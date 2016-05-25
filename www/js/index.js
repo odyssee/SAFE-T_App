@@ -381,12 +381,13 @@ function F_Send_Request()
 			{
 			  flag_alarme_temperature_systeme_detecte = 1 ;
 			  flag_alarme_temperature_systeme_detecte_1 = 1 ;
-			  document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte + ' ' + flag_alarme_temperature_systeme_detecte_1  ;
+			  
 			}
 			else
 			{
 			  flag_alarme_temperature_systeme_detecte = 0 ;
 			}
+			document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte + ' ' + flag_alarme_temperature_systeme_detecte_1  ;
 			
 			if((flag_alarme_temperature_systeme_detecte == 1) && (flag_alarme_temperature_systeme_detecte_1 == 0))
 			{
