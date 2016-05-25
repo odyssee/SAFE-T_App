@@ -447,7 +447,7 @@ function F_Send_Request()
 			flag_alarme_puissance_detecte_1 = flag_alarme_puissance_detecte ;
 			flag_alarme_longueur_detecte_1 = flag_alarme_longueur_detecte ;
 			flag_alarme_temperature_detecte_1 = flag_alarme_temperature_detecte ;
-			
+			flag_alarme_temperature_systeme_detecte_1 = flag_alarme_temperature_systeme_detecte ;
 			
 		};
 		xhr.send(null) ;
