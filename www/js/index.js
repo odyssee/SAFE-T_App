@@ -44,7 +44,6 @@ var flag_alarme_longueur_detecte = 0 ;
 var flag_alarme_longueur_detecte_1 = 0 ;
 var flag_alarme_puissance_detecte = 0 ;
 var flag_alarme_puissance_detecte_1 = 0 ;
-var toto = 0 ;
 
 var app = {
     // Application Constructor
@@ -382,6 +381,7 @@ function F_Send_Request()
 			{
 			  flag_alarme_temperature_systeme_detecte = 1 ;
 			  flag_alarme_temperature_systeme_detecte_1 = 1 ;
+			  document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte + ' ' + flag_alarme_temperature_systeme_detecte_1  ;
 			}
 			else
 			{
@@ -433,8 +433,8 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min"+" : All parameters Normal" ;
 				document.getElementById('notifRectangle').style.color = '#112330' ;	
 			}
-			flag_alarme_temperature_systeme_detecte_1 = flag_alarme_temperature_systeme_detecte ;
-			document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte + ' ' + flag_alarme_temperature_systeme_detecte_1  ;
+			//flag_alarme_temperature_systeme_detecte_1 = flag_alarme_temperature_systeme_detecte ;
+			
 			
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
 			flag_alerte_longueur_detecte_1 = flag_alerte_longueur_detecte ;
