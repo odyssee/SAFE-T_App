@@ -392,12 +392,12 @@ function F_Send_Request()
 			
 		
 			
-		/*	if(chaine_alerte.charAt(0) != 0)
+			if(chaine_alerte.charAt(0) != 0)
 			{
 			  flag_alarme_systeme_detecte = 1 ;
 			  document.getElementById('notifRectangle').style.color = '#DB1423' ;
 		          document.getElementById('notifRectangle').style.backgroundColor = '#E3BDBF' ;
-			}
+			}/*
 			else
 			{
 			  flag_alarme_systeme_detecte = 0 ;
