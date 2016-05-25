@@ -381,6 +381,7 @@ function F_Send_Request()
 			if(chaine_alerte.charAt(2) == 5)
 			{
 			  flag_alarme_temperature_systeme_detecte = 1 ;
+			  flag_alarme_temperature_systeme_detecte_1 = 1 ;
 			}
 			else
 			{
@@ -433,7 +434,8 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').style.color = '#112330' ;	
 			}
 			flag_alarme_temperature_systeme_detecte_1 = flag_alarme_temperature_systeme_detecte ;
-		document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte + ' ' + flag_alarme_temperature_systeme_detecte_1  ;
+			document.getElementById('COUPLE').innerHTML = flag_alarme_temperature_systeme_detecte + ' ' + flag_alarme_temperature_systeme_detecte_1  ;
+			
 			flag_alerte_puissance_detecte_1 = flag_alerte_puissance_detecte ;
 			flag_alerte_longueur_detecte_1 = flag_alerte_longueur_detecte ;
 			flag_alerte_temperature_detecte_1 = flag_alerte_temperature_detecte ;
