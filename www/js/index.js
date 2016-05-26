@@ -183,7 +183,7 @@ function F_Send_Request()
 			reponse_text = xhr.responseText ;
 			reponse_text_Array = reponse_text.split("!");
 			chaine_alerte = reponse_text_Array[10] ;
-			
+			document.getElementById('notifRectangle').innerHTML = reponse_text ;
 			if(reponse_text != '0' )
 			{
 			
@@ -478,7 +478,7 @@ function F_Send_Request()
 				document.getElementById('notifRectangle').innerHTML = "Tethered Stations not reachable please check your Wifi connection" ; 	
 			        document.getElementById('notifRectangle').style.color = '#DB1423' ;
 			}*/
-			document.getElementById('notifRectangle').innerHTML = reponse_text ;
+			
 		} ;
 		
 		
