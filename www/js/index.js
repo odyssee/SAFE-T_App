@@ -184,11 +184,10 @@ function F_Send_Request()
 			reponse_text_Array = reponse_text.split("!");
 			chaine_alerte = reponse_text_Array[10] ;
 			
-			if(reponse_text = '0' )
+			if(reponse_text != '0' )
 			{
-			document.getElementById('notifRectangle').innerHTML = "Tethered Stations not reachable please check your Wifi connection" ; 	
-			document.getElementById('notifRectangle').style.color = '#DB1423' ;
-			} 
+			
+		 
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
 			document.getElementById('TEMPERATURE').innerHTML = reponse_text_Array[5]+"°C" ;
 			document.getElementById('PUISSANCE').innerHTML = reponse_text_Array[6] +'W';
@@ -473,7 +472,12 @@ function F_Send_Request()
 			flag_alarme_longueur_detecte_1 = flag_alarme_longueur_detecte ;
 			flag_alarme_temperature_detecte_1 = flag_alarme_temperature_detecte ;
 			flag_alarme_temperature_systeme_detecte_1 = flag_alarme_temperature_systeme_detecte ;
-			
+			}
+			else
+			{
+				document.getElementById('notifRectangle').innerHTML = "Tethered Stations not reachable please check your Wifi connection" ; 	
+			document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			}
 		} ;
 		
 		
