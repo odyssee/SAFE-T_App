@@ -182,7 +182,7 @@ function F_Send_Request()
 		xhr.onload = function () 
 		{
 			reponse_text = xhr.responseText ;
-			reponse_text_Array = reponse_text.split("-");
+			reponse_text_Array = reponse_text.split("!");
 			chaine_alerte = reponse_text_Array[10] ;
 			
 			document.getElementById('HEURES').innerHTML = reponse_text_Array[0]+'h'+ reponse_text_Array[1]+"min";
