@@ -177,7 +177,12 @@ function F_Send_Request()
 	
 	//xhr.responseType = 'text' ;
 	xhr.open('GET', 'http://192.168.4.1', true) ;
-        
+        	xhr.onerror = function () 
+		{
+		//  document.getElementById('notifRectangle').innerHTML = "Tethered Stations not reachable please check your Wifi connection" ; 	
+		//  document.getElementById('notifRectangle').style.color = '#DB1423' ;
+		alert('error making the request.');
+		};
 	
 		xhr.onload = function () 
 		{
@@ -472,12 +477,7 @@ function F_Send_Request()
 			
 		} ;
 		
-		xhr.onerror = function () 
-		{
-		//  document.getElementById('notifRectangle').innerHTML = "Tethered Stations not reachable please check your Wifi connection" ; 	
-		//  document.getElementById('notifRectangle').style.color = '#DB1423' ;
-		alert('error making the request.');
-		};
+		
 		
 		xhr.send(null) ;
 		
