@@ -476,7 +476,11 @@ function F_Send_Request()
 		
 		} ;
 		
-		xhr.ontimeout = function () { alert("Timed out!!!"); }
+		xhr.ontimeout = function () 
+		{ 
+			document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			document.getElementById('notifRectangle').innerHTML = "Tethered Stations not reachable please check your Wifi connection" ; 
+		}
 		
 		xhr.send(null) ;
 		
