@@ -177,7 +177,7 @@ function F_Send_Request()
 	
 	//xhr.responseType = 'text' ;
 	xhr.open('GET', 'http://192.168.4.1', true) ;
-        	
+        xhr.timeout = 2000;	
 		xhr.onload = function () 
 		{
 			reponse_text = xhr.responseText ;
@@ -473,15 +473,10 @@ function F_Send_Request()
 			flag_alarme_temperature_detecte_1 = flag_alarme_temperature_detecte ;
 			flag_alarme_temperature_systeme_detecte_1 = flag_alarme_temperature_systeme_detecte ;
 			}
-		/*	else
-			{
-				document.getElementById('notifRectangle').innerHTML = "Tethered Stations not reachable please check your Wifi connection" ; 	
-			        document.getElementById('notifRectangle').style.color = '#DB1423' ;
-			}*/
-			
+		
 		} ;
 		
-		
+		xhr.ontimeout = function () { alert("Timed out!!!"); }
 		
 		xhr.send(null) ;
 		
