@@ -473,11 +473,12 @@ function F_Send_Request()
 			flag_alarme_temperature_detecte_1 = flag_alarme_temperature_detecte ;
 			flag_alarme_temperature_systeme_detecte_1 = flag_alarme_temperature_systeme_detecte ;
 			}
-			else
+		/*	else
 			{
 				document.getElementById('notifRectangle').innerHTML = "Tethered Stations not reachable please check your Wifi connection" ; 	
-			document.getElementById('notifRectangle').style.color = '#DB1423' ;
-			}
+			        document.getElementById('notifRectangle').style.color = '#DB1423' ;
+			}*/
+			document.getElementById('notifRectangle').innerHTML = reponse_text ;
 		} ;
 		
 		
