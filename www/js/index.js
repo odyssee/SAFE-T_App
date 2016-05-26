@@ -474,8 +474,9 @@ function F_Send_Request()
 		
 		xhr.onerror = function () 
 		{
-		  document.getElementById('notifRectangle').innerHTML = "Tethered Stations not reachable please check your Wifi connection" ; 	
-		  document.getElementById('notifRectangle').style.color = '#DB1423' ;
+		//  document.getElementById('notifRectangle').innerHTML = "Tethered Stations not reachable please check your Wifi connection" ; 	
+		//  document.getElementById('notifRectangle').style.color = '#DB1423' ;
+		alert('error making the request.');
 		};
 		
 		xhr.send(null) ;
