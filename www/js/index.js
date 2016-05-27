@@ -167,6 +167,80 @@ function notifHeight(){
 	//alert("width ok");
 }
 
+function dimensionnerHalf()
+{
+	var Lmax = document.getElementById('topHalf').offsetWidth;
+	var Hmax = document.getElementById('sectionBloc').offsetHeight;
+	var topHalf = document.getElementById('topHalf');
+	var H;
+	var inverseRatio=1.0936; /*inverseRatio = l/h*/
+	/*On définit la hauteur de la première section comme le minimum de la hauteur de sectionBloc et de la hauteur calculée avec inverseRatio */
+	
+	
+
+	
+	if(window.matchMedia("(orientation:portrait)").matches)
+	{
+		var pourcentage = 0.6; /*Maximum poucentage% de la hauteur de sectionBloc*/
+	}
+	else{
+		var pourcentage = 1; /*Maximum poucentage% de la hauteur de sectionBloc*/
+	}
+
+		H = 2/3*Lmax/inverseRatio; /*On prend la hauteur des tuiles comme étant à 2 fois la hauteur d'un carre ==> cf. function dimensionner */
+		//alert(Lmax/inverseRatio);
+		//alert(pourcentage*Hmax);
+		//alert("H redimensionnée");
+	
+
+	/*
+	/*Pour tester si on est en mode portrait ou paysage
+	if(window.matchMedia("(orientation:portrait)").matches)
+	{
+		alert("portrait");
+	}
+	else{
+		alert("landscape");
+	}
+	*/
+	topHalf.style.height = H +"px";	
+}
+
+function dimensionner() 
+{
+	alert("Alerte0");
+		
+	//var inverseRatio = 0.9;
+	var inverseRatio=1.0936; /* inverseRatio = l/h */
+	//var inverseRatio = 1;
+	//var inverseRatio = 2/3 * 1.6524; // 2/3 du ratio pour le grand rectangle
+	var Hmax = document.getElementById('topHalf').offsetHeight;
+	var Lmax = document.getElementById('topHalf').offsetWidth;
+
+	var carres = document.getElementsByClassName('carre');
+	var h ; //= carres[0].offsetHeight;
+	var l; // = carres[0].offsetWidth;
+
+	if(Lmax/(3*inverseRatio) > Hmax/2) /*on définit la hauteur des carrés comme le min de la hauteur calculée avec inverseRatio et de la hauteur */
+	{
+		h = Hmax/2;
+		l = h*inverseRatio;
+	}
+	else
+	{
+		l = Lmax/3;
+		h = l/inverseRatio;
+	}
+
+	for (var i= 0; i < carres.length; ++i)
+	{
+		var carre = carres[i];
+		carre.style.width = l + "px";
+		carre.style.height = h +"px";
+	}
+}
+
+
 function F_Send_Request()
 {
 	var xhr = new XMLHttpRequest() ;

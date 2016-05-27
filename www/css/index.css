@@ -170,18 +170,6 @@ h1 {
 }
 */
 
-/* Délimitation du "bloc" de la page*/
-#bloc_page
-{
-	width: 100%;
-	height: window.innerHeight;
-	margin: 0 0;
-	min-height: 100%;
-	/*-webkit-box-shadow:inset 0px 0px 0px 2px green;
-	box-shadow:inset 0px 0px 0px 2px green;*/
-	
-
-}
 
 header
 {
@@ -199,12 +187,6 @@ header
 	flex-direction: row;
 
 	
-	/*-webkit-box-text-align: justify; /*alignement selon premier axe*/ 
-	/*-webkit-align-content: stretch; /*alignement selon premier axe*/
-	/*-moz-box-pack: space-between;
-	-ms-flex-pack: space-between;*/
-	/*justify-content: space-between;*/ /*alignement selon premier axe*/
-	
 	/*On centre les éléments verticalement*/
 	-webkit-align-items: center;
 	align-items: center;
@@ -215,86 +197,20 @@ header
 	position: absolute;
 	top: 0;
 	height: 10%; 
-	width: 98%; /* width = 100% - padding-left */
+	width: 100%; /* width = 100% - padding-left?? */
 	margin: 0 0;
 	padding-left: 2%; /* Marge intérieure*/
 	
-	/*-webkit-box-shadow:inset 0px 0px 0px 2px black;
-	box-shadow:inset 0px 0px 0px 2px black;*/
-	
-	/*background-color: #112330;*/
 	/*Image de fond --> bien vérifier que la longueur est suffisante, sinon rajouter un rectangle en + derrière?*/
-	background: url('../img/EnTete2.png') no-repeat top left;
+	background: url('../img/EnTete4.png') no-repeat top left;
 	/*background-size: auto 100%;*/
 	background-size: cover;
-	color: black;
-}
-/*
-header img{
-	width: auto;
-	height: 100%;
-	overflow: hidden;
-	-webkit-box-shadow:inset 0px 0px 0px 1px blue;
-	box-shadow:inset 0px 0px 0px 1px blue;
-}
-*/
-.titre
-{
-	display: -webkit-box;
-    display: -webkit-flex; 
-	/*display: -moz-box;
-	display: -ms-flexbox;*/
-    display: flex;
-	
-	
-	-webkit-box-orient: horizontal;
-	-webkit-flex-direction: row; 
-	/*-moz-box-direction: normal;
-	-ms-flex-direction: row;*/
-	flex-direction: row;
-	
-	/*On centre les éléments verticalement*/
-	-webkit-align-items: end;
-	align-items: end;
-	-webkit-box-align: end;
-
-	height: 60%;
-	width: 50%;
-	/*On aligne verticalement les textes entre eux http://www.alsacreations.com/astuce/lire/4-alignement-vertical-image-texte.html */
-	line-height: 100%;
-	vertical-align: bottom;
-	/*-webkit-box-shadow:inset 0px 0px 0px 1px yellow;
-	box-shadow:inset 0px 0px 0px 1px yellow;*/
-}
-
-.Safe
-{
-	display: -webkit-box;
-    display: -webkit-flex; 
-	/*display: -moz-box;
-	display: -ms-flexbox;*/
-    display: flex;
-	
-	
-	-webkit-box-orient: horizontal;
-	-webkit-flex-direction: row; 
-	/*-moz-box-direction: normal;
-	-ms-flex-direction: row;*/
-	flex-direction: row;
-	
-	/*On centre les éléments verticalement*/
-	-webkit-align-items: end;
-	align-items: end;
-	-webkit-box-align: end;
-	line-height: 85%; /* Pour avoir "SAFE-T" et "Monitor" sur la même ligne, garder cette ligne */
-	
-	font-family: Open Sans;
-	font-weight: bold;
-	font-size: 150%;
 	color: white;
+
 }
 
-.Monitor
+
+#footer
 {
 	display: -webkit-box;
     display: -webkit-flex; 
@@ -302,44 +218,20 @@ header img{
 	display: -ms-flexbox;*/
     display: flex;
 	
-	
-	-webkit-box-orient: horizontal;
-	-webkit-flex-direction: row; 
-	/*-moz-box-direction: normal;
-	-ms-flex-direction: row;*/
-	flex-direction: row;
-	
-	/*On centre les éléments verticalement*/
-	-webkit-align-items: end;
-	align-items: end;
-	-webkit-box-align: end;
-	line-height: 100%;  /* Pour avoir "SAFE-T" et "Monitor" sur la même ligne, garder cette ligne */
-	
-	font-family: Open Sans;
-	font-weight: bold;
-	font-size: 60%;
-	color: #0088bc;
-	vertical-align: bottom;
-}
+	/*-webkit-box-direction: normal;*/
 
-footer
-{
-	display: -webkit-box;
-    display: -webkit-flex; 
-	/*display: -moz-box;
-	display: -ms-flexbox;*/
-    display: flex;
 	
-	-webkit-box-direction: normal;
+	-webkit-box-orient: horizontal ;
 	-webkit-flex-direction: row; 
+	/*-webkit-flex-orient: normal;*/
 	/*-moz-box-direction: normal;
 	-ms-flex-direction: row;*/
-	flex-direction: row;
+	flex-direction: row;	
 	
 	position: absolute; /*fixed?*/
 	bottom: 0;
 	height: 6.8%; 
-	width: 96%; /* width = 100% - padding-left - padding-right */
+	width: 100%; /* width = 100% - padding-left - padding-right ??*/
 	margin: 0 0;
 	padding-left: 2%;
 	padding-right: 2%;
@@ -366,7 +258,16 @@ footer
 	font-style: normal;
 }
 
-section
+
+#footer img /* Réduction de la taille du logo */
+{
+	width: auto;
+	height: 52%;
+	/*-webkit-box-shadow:inset 0px 0px 0px 1px blue;
+	box-shadow:inset 0px 0px 0px 1px blue;*/
+}
+
+#TotalTime
 {
 	display: -webkit-box;
     display: -webkit-flex; 
@@ -374,38 +275,100 @@ section
 	display: -ms-flexbox;*/
     display: flex;
 	
-	/* ON DIVISE LA SECTION EN DEUX VERTICALEMENT*/
-	-webkit-box-orient: vertical ;
-	-webkit-flex-direction: column; 
+	-webkit-box-orient: horizontal ;
+	-webkit-flex-direction: row; 
 	/*-webkit-flex-orient: normal;*/
 	/*-moz-box-direction: normal;
 	-ms-flex-direction: row;*/
-	flex-direction: column;
+	flex-direction: row;
 	
-	/*On centre les éléments horizontalement*/
-	-webkit-align-items: center;
-	align-items: center;
+	font-family: Open Sans;
+		
+}
 
+#sectionBloc 
+{
+	display: -webkit-box;
+    display: -webkit-flex; 
+	/*display: -moz-box;
+	display: -ms-flexbox;*/
+    display: flex;
 	
+	position: relative;
 	position: absolute;
-	/*bottom: 6.8%;*/
 	top: 10%;
-	/*top: 13.96%;*/
-	/*margin-left: 4.95%;
-	margin-right: 4.95%;*/
-	/*margin-top: 3.71%;*/
 	height: 83.11%;
 	width: 100%;
-	/*width: 90.36%;*/
-	/*max-width: 1388px;*/
 	margin:0;
 	
-	/*-webkit-box-shadow:inset 0px 0px 0px 5px yellow;
-	box-shadow:inset 0px 0px 0px 5px yellow;*/
+	/*Paddings intérieurs*/
+	padding: 2%;
 	
+	/*-webkit-box-shadow:inset 0px 0px 0px 2px red;
+	box-shadow:inset 0px 0px 0px 2px red;*/
+
 }
 
-#sectionBloc /* Nécessaire pour le javascript, sinon comment obtenir la vraie largeur de la section? */
+@media (orientation: portrait)
+{
+	#sectionBloc
+	{
+		/* ON DIVISE LA SECTION EN DEUX VERTICALEMENT QUAND ON ES EN MODE PORTRAIT*/
+		-webkit-box-orient: vertical ;
+		-webkit-flex-direction: column; 
+		/*-webkit-flex-orient: normal;*/
+		/*-moz-box-direction: normal;
+		-ms-flex-direction: row;*/
+		flex-direction: column;	
+		
+		/*On centre les éléments horizontalement*/
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-box-align: center;
+		
+		/*On centre les éléments verticalement*/
+		/*Option 1: espacement ente tuiles et notifications*/
+		/*box-pack: justify;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;*/
+		
+		/*Option 2: tuiles et notifications sont accolées verticalement */
+		box-pack: start;
+		-webkit-box-pack: start;
+		-webkit-justify-content: flex-start;
+		justify-content: flex-start;
+			
+	}
+
+}
+
+@media (orientation: landscape)
+{
+		#sectionBloc
+	{
+		/* ON DIVISE LA SECTION EN DEUX HORIZONTALEMENT QUAND ON EST EN MODE PAYSAGE*/
+		-webkit-box-orient: horizontal ;
+		-webkit-flex-direction: row; 
+		/*-webkit-flex-orient: normal;*/
+		/*-moz-box-direction: normal;
+		-ms-flex-direction: row;*/
+		flex-direction: row;	
+		
+		/*On centre les éléments verticalement --> Par défaut alignement en mode "flex-start"*/
+		/*-webkit-align-items: center;
+		align-items: center;
+		-webkit-box-align: center;*/
+		
+		/*On centre les éléments horizontalement*/
+		box-pack: justify;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+	}
+}
+
+#topHalf
 {
 	display: -webkit-box;
     display: -webkit-flex; 
@@ -413,36 +376,54 @@ section
 	display: -ms-flexbox;*/
     display: flex;
 	
-	/* ON DIVISE LA SECTION EN DEUX VERTICALEMENT*/
 	-webkit-box-orient: vertical ;
 	-webkit-flex-direction: column; 
 	/*-webkit-flex-orient: normal;*/
 	/*-moz-box-direction: normal;
 	-ms-flex-direction: row;*/
-	flex-direction: column;
+	flex-direction: column;	
 	
+	/*On espace les tuiles entre elles */
 	
-	/*On centre les éléments horizontalement*/
-	-webkit-align-items: center;
-	align-items: center;
-	-webkit-box-align: center;
+	/*Horizontalement*/
+	-webkit-align-items: justify;
+	align-items: justify;
+	-webkit-box-align: justify;
 	
-	/*On centre les éléments verticalement*/
-	box-pack: center;
+	/*Verticalement*/
+	/*Option 1: centré */
+	/*box-pack: center;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
-	justify-content: center;
+	justify-content: center;*/
 	
-	width: 100%;
-	height: 100%;
+	/*Option 2: callé en haut*/
+	box-pack: start;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
 	
-	/*-webkit-box-shadow:inset 0px 0px 0px 2px red;
-	box-shadow:inset 0px 0px 0px 2px red;*/
+}
+@media (orientation: portrait)
+{
+	#topHalf
+	{
+		/*height: 60%;*/
+		width: 100%;
+	}
 
+}
+@media (orientation: landscape)
+{
+	#topHalf
+	{
+		height: 100%;
+		width: 60%;
+	}
 
 }
 
-#innerBloc
+#notificationHalf
 {
 	display: -webkit-box;
     display: -webkit-flex; 
@@ -450,37 +431,58 @@ section
 	display: -ms-flexbox;*/
     display: flex;
 	
-	/* ON DIVISE LA SECTION EN DEUX VERTICALEMENT*/
+	/* On empile les éléments verticalement */
 	-webkit-box-orient: vertical ;
 	-webkit-flex-direction: column; 
 	/*-webkit-flex-orient: normal;*/
 	/*-moz-box-direction: normal;
 	-ms-flex-direction: row;*/
-	flex-direction: column;
+	flex-direction: column;	
 	
 	
-	/*On centre les éléments horizontalement*/
-	-webkit-align-items: center;
-	align-items: center;
-	/*On centre les éléments verticalement*/
-	box-pack: justify;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
+	/*Padding en bas parce que sinon pb de présentation sur téléphone au moins */
+	padding-bottom: 1%;
+	
+	/*Couleur du titre "notifications"*/
+	color: #888888;
+	
+	
+	
+	
+}
 
-	/*width: 100%;
-	height: 100%;*/
-	top: 2.5%;
-	height: 95%;
-	width: 95%;
-	
-	/*-webkit-box-shadow:inset 0px 0px 0px 2px red;
-	box-shadow:inset 0px 0px 0px 2px red;*/
+@media (orientation: portrait)
+{
+	#notificationHalf
+	{
+		height: 40%;
+		width: 100%;
+		
+		/*Padding en haut pour espacer des tuiles quand on est en mode portrait*/
+		padding-top: 5%;
 
+	}
+
+}
+@media (orientation: landscape)
+{
+	#notificationHalf
+	{
+		height: 100%;
+		width: 40%;
+		
+		/*Padding à gauche pour quand on est en mode paysage*/
+		padding-left: 3%;
+		padding-right: 3%;
+		
+		/* On centre le titre "notifications" quand on est en mode paysage */
+		text-align:center;
+	}
 
 }
 
-#topHalf /* On rajoute topHalf pour que l'ensemble des #tuiles soit bien centré */
+
+#notifRectangle
 {
 	display: -webkit-box;
     display: -webkit-flex; 
@@ -488,44 +490,7 @@ section
 	display: -ms-flexbox;*/
     display: flex;
 	
-	/* ON DIVISE LA SECTION EN DEUX VERTICALEMENT*/
-	-webkit-box-orient: vertical ;
-	-webkit-flex-direction: column; 
-	/*-webkit-flex-orient: normal;*/
-	/*-moz-box-direction: normal;
-	-ms-flex-direction: row;*/
-	flex-direction: column;
-	
-	
-	/*On centre les éléments horizontalement*/
-	-webkit-align-items: center;
-	align-items: center;
-	/*On centre les éléments verticalement*/
-	box-pack: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center; /* Encore mieux serait d'utiliser space-around, mais pas d'équivalent avec webkit-box-pack */
-	justify-content: center;
-
-	/*width: 100%;
-	height: 100%;*/
-	/*top: 2.5%;*/
-	height: 55%;
-	width: 100%;
-	
-	/*-webkit-box-shadow:inset 0px 0px 0px 2px blue;
-	box-shadow:inset 0px 0px 0px 2px blue;*/
-
-}
-
-#tuiles
-{
-	display: -webkit-box;
-    display: -webkit-flex; 
-	/*display: -moz-box;
-	display: -ms-flexbox;*/
-    display: flex;
-	
-	/* ON "WRAP" LES ELEMENTS FLEX SUR PLUSIEURS LIGNES ==> cf. http://www.sketchingwithcss.com/samplechapter/cheatsheet.html */
+	/*On liste les alertes verticalement*/
 	-webkit-box-orient: vertical ;
 	-webkit-flex-direction: column; 
 	/*-webkit-flex-orient: normal;*/
@@ -533,28 +498,42 @@ section
 	-ms-flex-direction: row;*/
 	flex-direction: column;	
 
-	/*-webkit-flex-wrap: wrap;
-	-webkit-box-wrap: wrap;
-	flex-wrap: wrap;*/
-	-webkit-align-items: center;
-	align-items: center; 
+	/*On aligne les messages d'alerte sur la gauche horizontalement*/
+	-webkit-align-items: flex-start;
+	align-items: flex-start; 
 	
-	/*Espacement entre les tuiles*/
-	box-pack: justify;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	justify-content: space-between; 
+	/*On centre les éléments verticalement*/
+	box-pack: start;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	
 	
 	position: relative;
-	/*top: 0;*/
-	height: 100%; 	/*height: 55%; vieille hauteur sans .topHalf */
-	/*width: 100%;*/ 
-	/*margin: 30px;*/
-	background: white;
-	/*-webkit-box-shadow:inset 0px 0px 0px 2px red;
-	box-shadow:inset 0px 0px 0px 2px red;*/
+	/*width: 93.5%;*/ /* width = 100 - paddings - margin-top*/
+	/*margin-top: 0.5%;*/ /* Mettre un espacement entre "NOTIFICATIONS" et le rectangle de notifications - possible en HTML*/
+	/*height: 100%;*/
+	height: 94%;
+	width: 100%;
+	background: #f2f9fc; /*blue*/
+	-webkit-box-shadow:inset 0px 0px 0px 0.3em #f3f4f4; /*bordure grise*/
+	box-shadow:inset 0px 0px 0px 0.3em #f3f4f4;
 	
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-top: 4%;
+	padding-bottom: 2%;
+	/*padding: 2%;*/
+	
+	/*Police*/
+	font-weight: bold;
+	color: #112330; /* couleur du texte quand il n'y a pas de pb, sinon à mettre en rouge avec JS */
+	
+	/*bordure solide*/
+	border: 0.025em solid #888888;
 }
+
+
 #premieresTuiles
 {
 	display: -webkit-box;
@@ -574,33 +553,48 @@ section
 	/*-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;*/
 	
-	/* On laisse de l'espace entre les carrés seulement:*/
-	-webkit-align-content: space-between;
-	align-content: space-between;
+	/* On laisse de l'espace entre les carrés seulement: ON CENTRE LES CARRES */
+	/*-webkit-align-content: center;
+	align-content: center;*/
 	
-	/* centrage des tuiles*/
+	/* On aligne la ligne de carrés avec le bas de premieresTuiles*/
+	/*Option 1 en centrant la première ligne de tuiles*/
+	box-align: center;
+	-webkit-box-align: center;
 	-webkit-align-items: center;
 	align-items: center; 
 	
+	/*Option 2: en alignant la première ligne de carrés avec le bas de premieresTuiles */
+	box-align: end;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+
+	
 	/*Espacement entre les tuiles*/
-	box-pack: justify;
+	/*box-pack: justify;
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
-	justify-content: space-between; 
+	justify-content: space-between;*/ 
+	box-pack: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
 
 	
 	position: relative;
 	/*top: 0;*/
-	height: 49%; /* Pour laisser un espacement vertical*/
+	/*height: 50%; */
 	width: 100%;
 	/*width: 100%;*/ 
 	/*margin: 30px;*/
 	background: white;
+	/* ==> RAJOUTER UN */
 	/*-webkit-box-shadow:inset 0px 0px 0px 2px green;
 	box-shadow:inset 0px 0px 0px 2px green;*/
 	
 }
-
+		
 #deuxiemesTuiles
 {
 	display: -webkit-box;
@@ -621,30 +615,27 @@ section
 	flex-wrap: wrap;*/
 	
 	/* On laisse de l'espace entre les carrés seulement:*/
-	-webkit-align-content: space-between;
-	align-content: space-between;
+	-webkit-align-content: center;
+	align-content: center;
 	
-	/* centrage des tuiles*/
-	/*-webkit-align-items: center;
-	align-items: center; */
+	/* On aligne la ligne de carrés avec le haut de deuxiemesTuiles*/
+	-webkit-align-items: flex-start;
+	align-items: flex-start; 
 	
 	/*Espacement entre les tuiles*/
-	box-pack: justify;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	justify-content: space-between; 
-
+	box-pack: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
 
 	
 	position: relative;
 	/*top: 0;*/
-	height: 49%; /* Pour laisser un espacement vertical */
+	/*height: 50%; */
 	width: 100%;
+	/*width: 100%;*/ 
 	/*margin: 30px;*/
 	background: white;
-	/*-webkit-box-shadow:inset 0px 0px 0px 2px green;
-	box-shadow:inset 0px 0px 0px 2px green;*/
-	
 }
 
 .carre
@@ -657,6 +648,7 @@ section
 	
 	position: relative;
 	height: 100%;
+	bottom: 0%;
 	/*width: 25vh;*/
 		
 	background-color: #e5e5e6;
@@ -685,6 +677,9 @@ section
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
 	justify-content: space-between;	
+	
+	-webkit-box-shadow:inset 0px 0px 0px 0.15em white; /*bordure interne blanche pour la séparation des tuiles*/
+	box-shadow:inset 0px 0px 0px 0.15em white;
 }
 
 .topCarre
@@ -708,12 +703,8 @@ section
 	height: 33%;
 	width: 90%;
 	padding-top: 37.5%;
-	
-	/*-webkit-box-shadow:inset 0px 0px 0px 2px red;
-	box-shadow:inset 0px 0px 0px 2px red; */
-	
-	/* Position du texte dans topCarre */
 
+	/* Position du texte dans topCarre */
 	/*On centre les éléments horizontalement*/
 	box-pack: center;
 	-webkit-box-pack: center;
@@ -736,42 +727,6 @@ section
 	
 }
 
-.flyingTime /* Cadre dans topCarre pour s'assurer que les chiffres et "hrs" et "min" sont bien alignés verticalement*/
-{
-	display: -webkit-box;
-    display: -webkit-flex; 
-	/*display: -moz-box;
-	display: -ms-flexbox;*/
-    display: flex;
-	
-	
-	-webkit-box-orient: horizontal;
-	-webkit-flex-direction: row; 
-	/*-moz-box-direction: normal;
-	-ms-flex-direction: row;*/
-	flex-direction: row;
-	
-
-	/*On centre les éléments horizontalement*/
-	box-pack: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	
-	/*On centre les éléments verticalement*/
-	-webkit-align-items: flex-end;
-	align-items: flex-end;
-	-webkit-box-align: end;
-
-	height: 50%;
-	width: 90%;
-	/*On aligne verticalement les textes entre eux http://www.alsacreations.com/astuce/lire/4-alignement-vertical-image-texte.html */
-	/*line-height: 100%;*/
-	vertical-align: text-bottom;
-	/*-webkit-box-shadow:inset 0px 0px 0px 1px yellow;
-	box-shadow:inset 0px 0px 0px 1px yellow;*/
-}
-
 .soustitre
 {
 	display: -webkit-box;
@@ -782,14 +737,11 @@ section
 	
 	position: relative;
 	bottom: 0;
-	height: 17.5%;
+	height: 16.5%;
 	width: 100%;
-		
-	/*background-color: #e5e5e6;*/
+	
 	color: #888888;
 	
-	/*-webkit-box-shadow:inset 0px 0px 0px 2px yellow;
-	box-shadow:inset 0px 0px 0px 2px yellow;*/
 	
 	-webkit-box-orient: horizontal ;
 	-webkit-flex-direction: row; 
@@ -815,149 +767,10 @@ section
 	/*font-size: 2 %;*/
 	
 	/*Emplacement*/
-	padding-bottom: 4%;
+	padding-bottom: 6%;
 }
 
-#dynamicWidth
-{
-	height: 100%;
-	background-color: #e5e5e6;
-	color: #888888;
-	/*-webkit-box-shadow:inset 0px 0px 0px 1px blue;
-	box-shadow:inset 0px 0px 0px 1px blue;*/
-}
-
-#notifications
-{
-	display: -webkit-box;
-    display: -webkit-flex; 
-	/*display: -moz-box;
-	display: -ms-flexbox;*/
-    display: flex;
-	
-	/* ON "WRAP" LES ELEMENTS FLEX SUR PLUSIEURS LIGNES ==> cf. http://www.sketchingwithcss.com/samplechapter/cheatsheet.html */
-	-webkit-box-orient: vertical ;
-	-webkit-flex-direction: column; 
-	/*-webkit-flex-orient: normal;*/
-	/*-moz-box-direction: normal;
-	-ms-flex-direction: row;*/
-	flex-direction: column;	
-
-	/*-webkit-flex-wrap: wrap;
-	-webkit-box-wrap: wrap;
-	flex-wrap: wrap;*/
-	-webkit-align-items: flex-start;
-	align-items: flex-start; 
-	
-	/*On centre les éléments verticalement*/
-	box-pack: end;
-	-webkit-box-pack: end;
-	-webkit-justify-content: flex-end;
-	justify-content: flex-end;
-	
-	
-	position: relative;
-	/*top: 0;*/
-	height: 43%; /* Un peu de marge entre tuiles et partie Notifications*//*43 car on prend une hauteur de 45% et on soustrait un padding-top de 2%*/
-	padding-top: 2%;
-	/*width: 100%;*/
-	
-	
-	/*width: 100%;*/ 
-	/*margin: 30px;*/
-	background: white;
-	/*webkit-box-shadow:inset 0px 0px 0px 2px red;
-	box-shadow:inset 0px 0px 0px 2px red;*/
-	
-	/*Police */
-	font-family: Open Sans;
-	font-style: normal;
-	font-size: 80%;
-	color: #888888;
-	/*font-size: 2 %;*/
-	
-	
-}
-
-#notifRectangle
-{
-	display: -webkit-box;
-    display: -webkit-flex; 
-	/*display: -moz-box;
-	display: -ms-flexbox;*/
-    display: flex;
-	
-	-webkit-box-orient: vertical ;
-	-webkit-flex-direction: column; 
-	/*-webkit-flex-orient: normal;*/
-	/*-moz-box-direction: normal;
-	-ms-flex-direction: row;*/
-	flex-direction: column;	
-
-	/*-webkit-flex-wrap: wrap;
-	-webkit-box-wrap: wrap;
-	flex-wrap: wrap;*/
-	-webkit-align-items: flex-start;
-	align-items: flex-start; 
-	
-	/*On centre les éléments verticalement*/
-	box-pack: start;
-	-webkit-box-pack: start;
-	-webkit-justify-content: flex-start;
-	justify-content: flex-start;
-	
-	
-	position: relative;
-	/*top: 0;*/
-	/*height: 80%;*/ /* Un peu de marge entre tuiles et partie Notifications*/
-	/*width: 96%;*/
-	width: 93.5%; /* width = 100 - paddings - margin-top*/
-	margin-top: 0.5%; /* Mettre un espacement entre "NOTIFICATIONS" et le rectangle de notifications*/
-	/*top: 2%;*/
-	/*width: 100%;*/ 
-	/*margin: 30px;*/
-	background: #f2f9fc; /*blue*/
-	-webkit-box-shadow:inset 0px 0px 0px 0.3em #f3f4f4; /*bordure grise*/
-	box-shadow:inset 0px 0px 0px 0.3em #f3f4f4;
-	
-	padding-left: 3%;
-	padding-right: 3%;
-	padding-top: 4%;
-	padding-bottom: 2%;
-	/*padding: 2%;*/
-	
-	/*Police*/
-	font-weight: bold;
-	color: #112330; /* couleur du texte quand il n'y a pas de pb, sinon à mettre en rouge avec JS */
-}
-
-#TotalTime
-{
-	display: -webkit-box;
-    display: -webkit-flex; 
-	/*display: -moz-box;
-	display: -ms-flexbox;*/
-    display: flex;
-	
-	-webkit-box-orient: horizontal ;
-	-webkit-flex-direction: row; 
-	/*-webkit-flex-orient: normal;*/
-	/*-moz-box-direction: normal;
-	-ms-flex-direction: row;*/
-	flex-direction: row;
-	
-	font-family: Open Sans;
-		
-}
-
-footer img /* Réduction de la taille du logo */
-{
-	width: auto;
-	height: 52%;
-	/*-webkit-box-shadow:inset 0px 0px 0px 1px blue;
-	box-shadow:inset 0px 0px 0px 1px blue;*/
-}
-
+/*-----------------------------------------------------------------------------*/
 /* Format des titres */
 p{
 	font-family: Open Sans;
@@ -995,12 +808,3 @@ h5 /* Pour "hrs" et "min" */
 	font-size: 40%;
 	/*font-size: 2 %;*/
 }
-
-
-
-	/*Mettre les bonnes marges pour les éléments carrés => http://stackoverflow.com/questions/7676951/how-to-put-spacing-between-floating-divs */
-/*.demiSection div:first-child, .demiSection div:nth-child(3n+1)
-{
-	
-}
-*/
